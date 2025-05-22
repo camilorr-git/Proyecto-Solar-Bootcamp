@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function(){
 
 // Variable para definir la diapositiva(.slide) inicial
 let diapositivaActual = 1;
@@ -18,3 +18,5 @@ setInterval(() => {
     document.getElementById(`slide${diapositivaActual}`).checked = true;
 
 }, 7000); // Tiempo en segundos =  segundos
+
+});
