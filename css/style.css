@@ -32,3 +32,18 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+/* Codigo Navegacion */
+.navbar-custom {
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+.navbar-scrolled {
+    background-color: var(--color-principal);
+}
+.carousel-item {
+    height: 100vh;
+    min-height: 500px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
