@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
+
 
 // Variable para definir la diapositiva(.slide) inicial
 let diapositivaActual = 1;
@@ -18,16 +18,3 @@ setInterval(() => {
     document.getElementById(`slide${diapositivaActual}`).checked = true;
 
 }, 7000); // Tiempo en segundos =  segundos
-
-
-  // Cambiar fondo del navbar al hacer scroll
-    window.addEventListener('scroll', function () {
-        const navbar = document.getElementById('mainNavbar');
-        if (window.scrollY > 50) {
-        navbar.classList.add('navbar-scrolled');
-        } else {
-        navbar.classList.remove('navbar-scrolled');
-        }
-    });
-
-});
