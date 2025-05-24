@@ -1,28 +1,39 @@
+/* Variables de Colores */
+:root {
+    --color-principal: #000030;
+    --color-secundario: #58626b;
+    --color-terciario:#eaeff2;
+    --color-azul:#1E2A38;
+    --color-verde:#34A853;
+    --color-amarillo:#FFC72C;
+    --color-fondo: #fff;
+    --color-texto1: #fff;
+    --color-texto2: #bebebe;
+    --color-texto3:#0D1B2A;
+}
 
 body{
     margin: 0;
     padding: 0;
 }
 
-/* Ocultar radios */
+/* Ocultar etiquetas de input radios */
 .slider input[type="radio"] {
     display: none;
 }
-
 
 /* Estilos generales del slider */
 .slider {
     width: 100%;
     max-width: 1920px;
-    height: 600px;
-    margin: 0 auto;
+    height: 800px;
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Alinea la navegación al fondo */
-    
+    justify-content: flex-end;
+    z-index: 1;
 }
 
 .slider-container {
@@ -64,18 +75,21 @@ body{
     z-index: 2;
 }
 
+/* Títulos del slide */
 .slide-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Texto frase slide */
 .slide-text {
     font-size: 1.2rem;
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Botón Slide */
 .slide-btn {
     padding: 10px 25px;
     background-color: #1B263B;
@@ -101,6 +115,7 @@ body{
     z-index: 3;
 }
 
+/* Botones de cambio de slide */
 .nav-dot {
     width: 12px;
     height: 12px;
@@ -109,24 +124,23 @@ body{
     cursor: pointer;
 }
 
-/* Cambio de slide según radio seleccionado */
-#slide1:checked ~ .slider-container {
-    transform: translateX(0%);
-}
-#slide2:checked ~ .slider-container {
-    transform: translateX(-100%);
-}
-#slide3:checked ~ .slider-container {
-    transform: translateX(-200%);
-}
+/* Cambio de slide según etiqueta input tipo radio seleccionada */
+    #slide1:checked ~ .slider-container {
+        transform: translateX(0%);
+    }
+    #slide2:checked ~ .slider-container {
+        transform: translateX(-100%);
+    }
+    #slide3:checked ~ .slider-container {
+        transform: translateX(-200%);
+    }
 
-/* Dot activo */
+/* Estilo de input tipo radio activo */
 #slide1:checked ~ .slider-nav label:nth-child(1),
 #slide2:checked ~ .slider-nav label:nth-child(2),
 #slide3:checked ~ .slider-nav label:nth-child(3) {
     background-color: white;
 }
-
 
 /* Efecto de overlay para mejorar legibilidad del texto */
 .slide::after {
@@ -139,4 +153,3 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
-
