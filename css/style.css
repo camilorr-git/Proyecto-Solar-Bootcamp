@@ -147,6 +147,13 @@ body {
 /* Termina Código Header */
 
 
+.image-about {
+    padding-top: 20px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
 /* Mapa */
 #mapaColombia {
     border-radius: 0px;
