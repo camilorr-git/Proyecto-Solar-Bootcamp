@@ -11,6 +11,46 @@
     --color-texto1: #fff;
     --color-texto2: #bebebe;
     --color-texto3:#0D1B2A;
+
+     /* Paleta de colores */
+    --solar: #FFC72C; /* Amarillo brillante para energía solar */
+    --hidrogeno: #00B4D8; /* Azul claro para energía del agua/hidrógeno */
+    --geotermica: #9D4EDD; /* Morado para energía geotérmica */
+    --bioenergia: #2ECC71; /* Verde para bioenergía */
+    --eolica: #3498DB; /* Azul para energía eólica */
+    --hidroelectrica: #1ABC9C; /* Verde azulado para energía hidroeléctrica */
+
+    --oscuro: #2b3f56; /* Color principal oscuro para texto y elementos */
+    --claro: #e7f2fe; /* Fondo claro */
+    --blanco: #ffffff;
+    --gris-azulado-muy-claro: #f8f9fa; /* Un blanco ligeramente azulado/grisáceo */
+    --gris-claro-bordes: #ced4da;
+    --gris-texto-suave: #6c757d;
+
+
+    --primario: var(--solar); /* Color principal para botones y acentos */
+    --secundario: var(--oscuro); /* Color secundario */
+
+    /* Sombras */
+    --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.075);
+    --sombra-media: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --sombra-profunda: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --sombra-interna-input: inset 0 1px 2px rgba(0,0,0,.075);
+
+
+    /* Tipografía */
+    --fuente-principal: 'Poppins', sans-serif; /* Asegúrate de importarla o tenerla disponible */
+    --tamano-base-fuente: 16px; /* Para usar con rem */
+
+    /* Bordes */
+    --radio-borde-suave: 0.25rem; /* 4px */
+    --radio-borde-medio: 0.5rem; /* 8px */
+
+    /* Transiciones */
+    --transicion-rapida: all 0.2s ease-in-out;
+    --transicion-media: all 0.3s ease-in-out;
+
+
 }
 /* Estilo General */
 *{
@@ -72,7 +112,7 @@ body {
     }
     /* Clase de efecto de items del menu (etiqueta a) */
     .navbar-nav .nav-link:hover{
-        color: var(--color-texto1);
+        color: var(--color-amarillo);
     }
 
     /* Linea de efecto subrayado a items del menu (etiqueta a) */
@@ -83,7 +123,7 @@ body {
         bottom: -5px;
         width: 100%;
         height: 2px;
-        background-color: var(--color-texto1);
+        background-color: var(--color-amarillo);
         transform: scaleX(0);
         transform-origin: left;
         transition: transform 0.3s ease;
@@ -91,18 +131,18 @@ body {
     /* Linea de efecto subrayado al pasar por encima de un item del menu (etiqueta a) */
     .navbar-nav .nav-link:hover:after {
         transform: scaleX(1);
-        background-color: var(--color-texto1);
+        background-color: var(--color-amarillo);
     }
 
     /* Clase estilo item del menu (etiqueta a) Menu Activo */
     .navbar-nav .nav-link.active {
-        color: var(--color-texto1);    
+        color: var(--color-amarillo);    
         transition: color 0.3s;
     }
     /* Linea de efecto subrayado al pasar por encima de un item del menu (etiqueta a) Menu Activo */
     .navbar-nav .nav-link.active:after {
         transform: scaleX(1);
-        background-color: var(--color-texto1);
+        background-color: var(--color-amarillo);
     }
 
 
@@ -147,6 +187,52 @@ body {
 /* Termina Código Header */
 
 
+.titlePage{
+    background-image: url(../img/slide/slide-01-placas-solares-campo.jpg);
+    position: relative;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 120px 0 40px 0;
+
+}
+.titlePage::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.titlePage h1 {
+    position: relative;
+    z-index: 1;
+    color: var(--color-amarillo);
+    text-align: center;
+    font-weight: 600;
+}
+.titlePage p {
+    position: relative;
+    z-index: 1;
+}
+.titlePage a {
+    position: relative;
+    z-index: 1;
+    color: var(--color-texto1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.titlePage a:hover {
+    color: var(--color-amarillo);
+}
+.titlePage p > span {
+    color: var(--color-texto2);
+}
+
+
+
 .image-about {
     padding-top: 20px;
     width: 100%;
@@ -174,6 +260,135 @@ body {
     transform: translateY(0);
 }
 
+
+
+
+/* Pie de Página */
+.pie-pagina {
+    background-color: var(--oscuro);
+    color: var(--claro);
+}
+
+
+.marca-pie-pagina img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: auto;   
+    margin-bottom: 20px;
+}
+
+.marca-pie-pagina p {
+    color: #ccc; /* Un gris claro */
+}
+
+h3.title-footer{
+    margin-bottom: 1.2rem; /* 20px */
+    color: var(--primario);
+    font-size: 1.8rem; /* 28px */
+    font-weight: 600;
+}
+
+ul.menu-footer, ul.contact-footer {
+    list-style: none;
+    padding: 0;
+}
+
+ul.menu-footer li, ul.contact-footer li {
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+ul.menu-footer li a, ul.contact-footer li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color var(--transicion-media);
+}
+
+ul.contact-footer li a:hover, ul.menu-footer li a:focus, ul.menu-footer li a:hover, ul.menu-footer li a:focus, ul.menu-footer li a.active {
+    color: var(--primario);
+    outline: none;
+}
+
+ul.menu-footer i, ul.contact-footer i  {
+    margin-right: 10px;
+}
+
+.base-pie-pagina {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.25rem; /* 20px */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* 16px */
+}
+
+.base-pie-pagina p {
+    color: #aaa; /* Un gris más oscuro */
+}
+
+.iconos-sociales a {
+    color: #ccc;
+    transition: color var(--transicion-media), transform var(--transicion-media);
+    display: inline-block;
+    margin: 0 0.5rem; /* Espaciado entre iconos */
+}
+
+.iconos-sociales a:hover, .iconos-sociales a:focus {
+    color: var(--primario);
+    transform: scale(1.2); /* Efecto de zoom */
+    outline: none;
+}
+
+
+/* Pie de Página */
+
+
+/* Botón Flotante */
+.boton-flotante {
+    position: fixed;
+    bottom: 1.875rem; /* 30px */
+    right: 1.875rem; /* 30px */
+    background-color: var(--primario);
+    color: var(--oscuro);
+    border-radius: 50%;
+    width: 3.75rem; /* 60px */
+    height: 3.75rem; /* 60px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem; /* ~29px */
+    box-shadow: var(--sombra-profunda);
+    z-index: 9999;
+    transition: background-color var(--transicion-media), transform var(--transicion-media), box-shadow var(--transicion-media);
+    text-decoration: none;
+    animation: pulso 2s infinite;
+}
+
+.boton-flotante:hover, .boton-flotante:focus {
+    background-color: #FFD966;
+    transform: scale(1.1);
+    animation: none; /* Detener pulso en hover/focus */
+    box-shadow: var(--sombra-media);
+    outline: none;
+}
+
+.boton-flotante i {
+    color: var(--oscuro);
+}
+
+@keyframes pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0.7), var(--sombra-profunda);
+    }
+    70% {
+        box-shadow: 0 0 0 1.25rem rgba(255, 199, 44, 0), var(--sombra-profunda); /* 20px */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0), var(--sombra-profunda);
+    }
+}
 
 
 
@@ -215,8 +430,171 @@ body {
 
 
 
-/* HTML Aprende */
+/* HTML Energía Solar */
+
+/* HTML Energía Solar */
+
+
+/* HTML Aprende e Involúcrate */
+
+/* HTML Aprende e Involúcrate */
+
+/* HTML Nosotros */
+
+/* HTML Nosotros */
 
 
 
-/* HTML Aprende */
+/* HTML Contáctanos */
+
+
+/* Estilos para la página de Contacto */
+.pagina-contacto .grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack en móviles por defecto */
+    gap: 2.5rem; /* 40px */
+    align-items: flex-start;
+}
+@media (min-width: 992px) { /* Dos columnas en pantallas grandes */
+    .pagina-contacto .grid-contacto {
+        grid-template-columns: 1fr 1.2fr; /* Formulario un poco más ancho */
+    }
+}
+
+
+.pagina-contacto .info-contacto,
+.pagina-contacto .formulario-contacto {
+    
+    background-color: var(--blanco);
+    padding: 2.5rem; /* 40px */
+    border-radius: var(--radio-borde-medio);
+    box-shadow: var(--sombra-media);
+}
+
+.pagina-contacto .info-contacto h2,
+.pagina-contacto .formulario-contacto h2 {
+    font-size: 2rem; /* 32px */
+    margin-bottom: 1.875rem; /* 30px */
+    color: var(--oscuro);
+    text-align: center;
+}
+
+.pagina-contacto .info-contacto p {
+    font-size: 1.1rem; /* ~17.6px */
+    margin-bottom: 1rem; /* 16px */
+    color: var(--gris-texto-suave);
+    display: flex;
+    align-items: center;
+}
+
+.pagina-contacto .info-contacto p i {
+    font-size: 1.5rem; /* 24px */
+    margin-right: 1rem; /* 16px */
+    color: var(--primario);
+    width: 24px; /* Ancho fijo para alineación */
+    text-align: center;
+}
+.info-contacto p a {
+    color: var(--oscuro);
+    text-decoration: none;
+    transition: color var(--transicion-media);
+}	
+.pagina-contacto .iconos-sociales-contacto {
+    display: flex;
+    gap: 1.25rem; /* 20px */
+    margin-top: 1.5rem; /* 24px */
+    justify-content: center;
+}
+
+.pagina-contacto .iconos-sociales-contacto a {
+    color: var(--oscuro);
+    font-size: 1.8rem; /* ~29px */
+    transition: color var(--transicion-media), transform var(--transicion-media);
+    display: inline-block;
+}
+
+.pagina-contacto .iconos-sociales-contacto a:hover,
+.pagina-contacto .iconos-sociales-contacto a:focus {
+    color: var(--primario);
+    transform: scale(1.1);
+    outline: none;
+}
+
+
+/* Sección Hero (General para otras páginas) */
+.seccion-hero {
+    /* Corregida la ruta de la imagen: asumiendo que 'img' está al mismo nivel que 'css' */
+    background: linear-gradient(rgba(14, 89, 174, 0.7), rgba(30, 42, 56, 0.7)), url('../img/images.jpg') no-repeat center center/cover;
+    color: var(--blanco);
+    text-align: center;
+    padding: 6.25rem 1.25rem; /* 100px 20px */
+    margin-bottom: 2.5rem; /* 40px */
+}
+
+.seccion-hero h1 {
+    font-size: 3.5rem; /* 56px */
+    margin-bottom: 1.25rem; /* 20px */
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para legibilidad */
+}
+
+.seccion-hero p {
+    font-size: 1.5rem; /* 24px */
+    max-width: 50rem; /* 800px */
+    margin: 0 auto 1.875rem auto; /* 30px */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+
+@media (max-width: 768px) { 
+    
+    .seccion-hero h1 {
+        font-size: 2.5rem; /* 40px */
+    }
+    .seccion-hero p {
+        font-size: 1.2rem; /* ~19px */
+    }
+    .pagina-contacto .grid-contacto { /* Forzar una columna en móviles */
+        grid-template-columns: 1fr;
+    }
+    .tarjeta-calculadora, .pagina-contacto .info-contacto, .pagina-contacto .formulario-contacto, .tarjeta-testimonio, .tarjeta-articulo {
+        padding: 1.25rem; /* 20px */
+    }
+    .tarjeta-calculadora h3, .pagina-contacto .info-contacto h2, .pagina-contacto .formulario-contacto h2 {
+        font-size: 1.5rem; /* 24px */
+        margin-bottom: 1.25rem; /* 20px */
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .seccion-hero h1 {
+        font-size: 1.8rem; /* ~29px */
+    }
+    .seccion-hero p {
+        font-size: 1rem;
+    }
+    .pagina-contacto .info-contacto, .pagina-contacto .formulario-contacto {
+        padding: 1rem; /* 16px */
+    }
+    .pagina-contacto .info-contacto h2, .pagina-contacto .formulario-contacto h2 {
+        font-size: 1.3rem; /* ~21px */
+        margin-bottom: 1.25rem; /* 20px */
+    }
+    .pagina-contacto .info-contacto p {
+        font-size: 0.95rem; /* ~15px */
+    }
+    .pagina-contacto .info-contacto p i {
+        font-size: 1.2rem; /* ~19px */
+        margin-right: 0.625rem; /* 10px */
+    }
+    .pagina-contacto .iconos-sociales-contacto {
+        gap: 1rem; /* 16px */
+        margin-top: 1.25rem; /* 20px */
+    }
+    .pagina-contacto .iconos-sociales-contacto a {
+        font-size: 1.5rem; /* 24px */
+    }
+
+}
+/* HTML Contáctanos */
