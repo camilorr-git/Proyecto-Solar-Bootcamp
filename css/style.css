@@ -351,7 +351,7 @@ body {
 
 
 .contenido-bienvenida p {
-    font-size: 1.6rem; /* ~17.6px */
+    font-size: 1.8rem; /* ~17.6px */
     margin-bottom: 1rem; /* 16px */
 }
 
@@ -360,6 +360,7 @@ body {
     font-size: 2.5rem; /* 40px */
     color: var(--oscuro);
     text-align: center;
+    font-weight: bold;
 }
 
 
@@ -373,16 +374,39 @@ body {
 /* call-to-action */
 
 .call-to-action {
+    background-image: url(../img/bg-call-to-action.jpg);
+    background-attachment: fixed;
+    background-position: center center;    
     background-color: var(--gris-azulado-muy-claro);
-    padding: 2.5rem; /* 40px */
+    padding: 70px;
     border-radius: var(--radio-borde-medio);
     text-align: left;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
+.call-to-action::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.call-to-action .container {
+    position: relative;
+    z-index: 2;
+}
+
 .call-to-action h2 {
     font-size: 3rem;
     font-weight: 600;
     color: var(--oscuro);
     margin-bottom: 1.25rem; /* 20px */
+    
 }
 .call-to-action p {
     font-size: 2.2rem; /* ~25.6px */
@@ -393,10 +417,156 @@ body {
 /* call-to-action */
 
 
+/* Inicio seccion de datos historicos */
+
+/* Tarjetas Históricos */
+.tarjeta-historicos {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta-historicos:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-historicos i {
+    font-size: 2rem;
+    color: #fbc02d; /* amarillo solar */
+    background-color: #fff8e1; /* fondo suave */
+    border-radius: 50%;
+    padding: 1rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-historicos:hover i {
+    transform: scale(1.1);
+}
+
+.tarjeta-historicos h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta-historicos p {
+    font-size: 1.3rem;
+    color: #555555;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* Fin  seccion de datos historicos */
+
+
+
+/* Inicio Estilo de Calculadora */
+    /* Calculadora de Ahorro Energético */
+    .seccion-calculadora {
+        background-color: var(--gris-azulado-muy-claro);
+    }
+
+    .tarjeta-calculadora {        
+        display: flex;
+        flex-direction: column;
+        background-color: var(--blanco);
+        border-radius: var(--radio-borde-medio);
+        box-shadow: var(--sombra-media);
+    }
+
+    .tarjeta-calculadora h3 {
+        color: var(--oscuro);
+        text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .caja-resultados {
+        margin-top: 1.875rem; /* 30px */
+        padding: 1.25rem; /* 20px */
+        background-color: #e9ecef; /* Un gris más claro para resultados */
+        border-radius: var(--radio-borde-suave);
+        border-left: 5px solid var(--primario);
+    }
+
+    .caja-resultados h3 {
+        text-align: left;
+        margin-bottom: 1rem; /* 16px */
+        color: var(--oscuro);
+    }
+
+    .caja-resultados p {
+        margin-bottom: 0.625rem;
+        color: #333;
+    }
+
+    .caja-resultados .error {
+        color: #ff394c; /* Rojo Bootstrap para errores */
+        font-weight: bold;
+    }
+    .caja-resultados .texto-pequeno {
+        color: var(--gris-texto-suave);
+    }
+    .caja-resultados .texto-advertencia {
+        color: #fd7e14; /* Naranja para advertencias */
+    }
+
+    .grupo-formulario input, .grupo-formulario textarea, .grupo-formulario select {
+        padding: 10px ; /* 10px */
+        font-size: 14px;
+    }
+
+    .resultado-listo {
+        background-color: #d4edda;
+        border-left: 5px solid #28a745;
+        color: #155724;
+    }
+
+    .alerta-error {
+        background-color: #f8d7da; /* rojo claro */
+        border-left: 5px solid #dc3545; /* rojo oscuro */
+        padding: 1rem;
+        color: #842029;
+        font-weight: 500;
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .alerta-exito {
+        background-color: #d1e7dd;
+        border-left: 5px solid #198754;
+        padding: 1rem;
+        color: #0f5132;
+        font-weight: 500;
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+    }
+
+
+/* Fin Estilo de Calculadora */
+
 /* Inicio - Cinco pasos para energía solar */
 
 
-/* Sección de Características */
+    /* Sección de Características */
     .seccion-caracteristicas {
         background: linear-gradient(to right, var(--oscuro), var(--eolica));
         color: var(--blanco);
