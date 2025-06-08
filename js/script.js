@@ -96,30 +96,41 @@ document.addEventListener('DOMContentLoaded', function () {
         //     }
         // });
 
-        // Dentro de tu if (mapaSolar) { ... }
-if (mapaSolar) {
-    // 1. Desactivar el zoom con scroll POR DEFECTO
-    mapaSolar.scrollWheelZoom.disable(); // <- Esto es clave
+    // Dentro de tu if (mapaSolar) { ... }
+    if (mapaSolar) {
+        // 1. Desactivar el zoom con scroll POR DEFECTO
+        mapaSolar.scrollWheelZoom.disable(); // <- Esto es clave
 
-    // 2. Activar zoom SOLO con Ctrl presionado
-    mapaSolar.getContainer().addEventListener('wheel', function(e) {
-        if (e.ctrlKey) {
-            // Permite zoom solo si Ctrl está presionado
-            mapaSolar.scrollWheelZoom.enable();
-        } else {
-            // Bloquea el zoom y el scroll normal en el mapa
-            e.preventDefault();
-            mapaSolar.scrollWheelZoom.disable();
-        }
-    });
+        // 2. Activar zoom SOLO con Ctrl presionado
+        mapaSolar.getContainer().addEventListener('wheel', function(e) {
+            if (e.ctrlKey) {
+                // Permite zoom solo si Ctrl está presionado
+                mapaSolar.scrollWheelZoom.enable();
+            } else {
+                // Bloquea el zoom y el scroll normal en el mapa
+                e.preventDefault();
+                mapaSolar.scrollWheelZoom.disable();
+            }
+        });
 
-    // 3. Opcional: Resetear al soltar Ctrl (para mayor seguridad)
-    document.addEventListener('keyup', function(e) {
-        if (e.key === 'Control') {
-            mapaSolar.scrollWheelZoom.disable();
-        }
-    });
-}
+        // 3. Opcional: Resetear al soltar Ctrl (para mayor seguridad)
+        document.addEventListener('keyup', function(e) {
+            if (e.key === 'Control') {
+                mapaSolar.scrollWheelZoom.disable();
+            }
+        });
+    }
+
+
+    // Boton Flotante
+    if (window.location.pathname.includes('index.html') && window.location.hash === '#seccion-calculadora') {
+        setTimeout(() => {
+            const seccionCalculadora = document.getElementById('seccion-calculadora');
+            if (seccionCalculadora) {
+                seccionCalculadora.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
+    }
 
 
 
