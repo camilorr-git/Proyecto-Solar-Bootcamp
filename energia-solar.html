@@ -15,8 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Enlace para importar fuentes de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Enlace Leaflet para mapas -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <!-- css general -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-slider.css">
     <style>
         body{
                 padding-top: 0px !important;
@@ -115,12 +118,52 @@
                 <p>Descripción de proyectos destacados.</p>
             </div>
         </section>
-        <section id="contacto" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">📞 Contáctanos</h2>
-                <p>Descripción de cómo contactarnos.</p>
+    <section id="faq" class="seccion-faqs relleno-seccion my-5 pb-5" aria-labelledby="titulo-faqs">
+            <div class="contenedor">
+                <h2 id="titulo-faqs" class="text-center my-5 pt-5">Visualización de Datos Energéticos (1965-2022)</h2>
+                <p class="text-center">Explora la evolución de la energía renovable en Colombia a través de nuestras visualizaciones interactivas.</p>
+                
+                <div class="faq-lista">
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-que-son-renovables">
+                            <h3>1. Producción de Energía Renovable por Fuente</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-que-son-renovables">
+                            <canvas id="graficoBarras" height="100"></canvas>
+                        </div>
+                    </div>
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-beneficios-solar">
+                            <h3>2. Participación de Energías Renovables (último año)</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-beneficios-solar">
+                            <canvas id="graficoTorta" height="100"></canvas>
+                        </div>
+                    </div>
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-eolica-colombia">
+                            <h3>3. Tendencia en la Capacidad Instalada</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-eolica-colombia">
+                            <canvas id="graficoLineas" height="100"></canvas>
+                        </div>
+                    </div>
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-hidrogeno-verde">
+                            <h3>4. Consumo de Energía: Renovable vs Convencional</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-hidrogeno-verde" height="500px">
+                            <canvas id="graficoArea" height="100"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+    
     </main>
 
     <footer class="container-fluid pie-pagina">
@@ -175,7 +218,27 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <a href="inicio.html#seccion-calculadora" class="boton-flotante" aria-label="Calcular Ahorro Energético">
+        <i class="fas fa-calculator" aria-hidden="true"></i>
+    </a>    
+
+    <!-- Js bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- Js para gráfico específico con Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <!-- Js mapas interactivos -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <!-- Js para animaciones en css WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    
+    <!-- \Ss General -->
+    <script src="js/script.js"></script>
+    <script src="js/script-faq.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/graficas.js"></script>
+    <!-- chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
