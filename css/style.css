@@ -1,5 +1,4 @@
 
-/* Variables de Colores */
 :root {
     --color-principal: #000030;
     --color-secundario: #58626b;
@@ -23,6 +22,8 @@
     --oscuro: #2b3f56; /* Color principal oscuro para texto y elementos */
     --claro: #e7f2fe; /* Fondo claro */
     --blanco: #ffffff;
+    
+    --gris-suave: #6c757d; /* Gris suave para textos secundarios */
     --gris-azulado-muy-claro: #f8f9fa; /* Un blanco ligeramente azulado/grisáceo */
     --gris-claro-bordes: #ced4da;
     --gris-texto-suave: #6c757d;
@@ -50,12 +51,15 @@
     --transicion-rapida: all 0.2s ease-in-out;
     --transicion-media: all 0.3s ease-in-out;
 
-
+    --sombra: 0 2px 5px rgba(0,0,0,0.1);
+    --borde-radius: 10px;
+    --fuente: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
 }
 /* Estilo General */
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--fuente);
 }
+
 /* Rest html */
 html {
     font-size: 62.5%;
@@ -75,7 +79,104 @@ body {
     padding-top: 70px;
 }
 
+
+/* Estilo General */
+
+    .boton {
+        display: inline-block;
+        padding: 0.75rem 1.5rem; /* 12px 25px */
+        background-color: var(--primario);
+        color: var(--oscuro);
+        text-decoration: none;
+        border-radius: var(--radio-borde-suave);
+        font-weight: bold;
+        transition: background-color var(--transicion-media), transform var(--transicion-media), box-shadow var(--transicion-media);
+        border: none;
+        cursor: pointer;
+        font-size: 1.6rem; /* 25.6px */
+        text-align: center;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .boton:hover, .boton:focus {
+        outline: none;
+        transform: translateY(-2px);
+        box-shadow: var(--sombra-media);
+    }
+
+    .botones-pagina-1 {
+        display: flex;
+        gap: 1rem; /* 16px */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .botones-pagina-1 .boton {
+        min-width: 11.25rem;
+        text-align: center;
+        border-radius: var(--radio-borde-medio);
+    }
+
+    .botones-pagina-1 .boton:hover {
+        background-color: var(--color-texto3);
+        color: var(--color-texto1);
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    
+    .boton-2 {
+        display: inline-block;
+        padding: 0.75rem 1.5rem; /* 12px 25px */
+        background-color: var(--color-fondo);
+        color: var(--oscuro);
+        text-decoration: none;
+        border-radius: var(--radio-borde-suave);
+        font-weight: bold;
+        transition: background-color var(--transicion-media), transform var(--transicion-media), box-shadow var(--transicion-media);
+        border: none;
+        cursor: pointer;
+        font-size: 1.6rem; /* 25.6px */
+        text-align: center;
+        box-shadow: var(--sombra-suave);
+    }
+
+    .boton-2:hover, .boton-2:focus {
+        outline: none;
+        transform: translateY(-2px);
+        box-shadow: var(--sombra-media);
+    }
+
+    .botones-pagina-2 {
+        justify-content: center;
+    }
+
+    .botones-pagina-2 .boton-2 {
+        min-width: 11.25rem;
+        text-align: center;
+        border-radius: var(--radio-borde-medio);
+    }
+
+    .botones-pagina-2 .boton-2:hover {
+        background-color: var(--primario);
+        color: var(--oscuro);
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+
+    .boton-secundario {
+        background-color: var(--oscuro);
+        color: var(--blanco);
+        margin: 0 15px;
+    }
+
+    .boton-secundario:hover, .boton-secundario:focus {
+        background-color: #38577e; /* Un tono más claro de --oscuro */
+    }
+
+/* Estilo General */
+
 /* Inicia Código Header */
+
     /* Barra de navigacion Principal Logo + items de menu + toggler */
     .navbar {
         position: fixed;
@@ -184,54 +285,60 @@ body {
         bottom: -8px;
         left: 0px;
     }
+
 /* Termina Código Header */
 
+/* Inicio estilo general sub paginas */
 
-.titlePage{
-    background-image: url(../img/slide/slide-01-placas-solares-campo.jpg);
-    position: relative;
-    background-position: top center;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 120px 0 40px 0;
+    .titlePage{
+        background-image: url(../img/slide/slide-01-placas-solares-campo.jpg);
+        position: relative;
+        background-position: top center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 120px 0 40px 0;
 
-}
-.titlePage::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
-.titlePage h1 {
-    position: relative;
-    z-index: 1;
-    color: var(--color-amarillo);
-    text-align: center;
-    font-weight: 600;
-}
-.titlePage p {
-    position: relative;
-    z-index: 1;
-}
-.titlePage a {
-    position: relative;
-    z-index: 1;
-    color: var(--color-texto1);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-.titlePage a:hover {
-    color: var(--color-amarillo);
-}
-.titlePage p > span {
-    color: var(--color-texto2);
-}
+    }
+    .titlePage::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+    .titlePage h1 {
+        position: relative;
+        z-index: 1;
+        color: var(--color-amarillo);
+        text-align: center;
+        font-weight: 600;
+    }
+    .titlePage p {
+        position: relative;
+        z-index: 1;
+    }
+    .titlePage a {
+        position: relative;
+        z-index: 1;
+        color: var(--color-texto1);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .titlePage a:hover {
+        color: var(--color-amarillo);
+    }
+    .titlePage p > span {
+        color: var(--color-texto2);
+    }
 
+/* Fin estilo general sub paginas */
 
+/* -------------------- */
+/* Inicio Estilo Inicio */
+/* -------------------- */
 
 .image-about {
     padding-top: 20px;
@@ -240,14 +347,180 @@ body {
     object-fit: cover;
 }
 
-/* Mapa */
-#mapaColombia {
-    border-radius: 0px;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1;
+/* Inicio Resumen del proyecto EcoVolt */
+
+
+.contenido-bienvenida p {
+    font-size: 1.6rem; /* ~17.6px */
+    margin-bottom: 1rem; /* 16px */
 }
+
+
+.titulo-seccion {
+    font-size: 2.5rem; /* 40px */
+    color: var(--oscuro);
+    text-align: center;
+}
+
+
+
+
+
+
+/* Inicio Resumen del proyecto EcoVolt */
+
+
+/* call-to-action */
+
+.call-to-action {
+    background-color: var(--gris-azulado-muy-claro);
+    padding: 2.5rem; /* 40px */
+    border-radius: var(--radio-borde-medio);
+    text-align: left;
+}
+.call-to-action h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--oscuro);
+    margin-bottom: 1.25rem; /* 20px */
+}
+.call-to-action p {
+    font-size: 2.2rem; /* ~25.6px */
+    color: var(--gris-claro-bordes);
+    margin-bottom: 1.875rem; /* 30px */
+}
+
+/* call-to-action */
+
+
+/* Inicio - Cinco pasos para energía solar */
+
+
+/* Sección de Características */
+    .seccion-caracteristicas {
+        background: linear-gradient(to right, var(--oscuro), var(--eolica));
+        color: var(--blanco);
+        text-align: center;
+    }
+
+    .seccion-caracteristicas h2, .seccion-caracteristicas .subtitulo-seccion {
+        color: var(--blanco);
+        font-size: 2.5rem;
+    }
+
+
+
+    .tarjeta-caracteristica {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: var(--radio-borde-medio);
+        box-shadow: none; /* Quitar sombra si el fondo ya es oscuro */
+        transition: transform var(--transicion-media), background-color var(--transicion-media);
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    }
+
+    .tarjeta-caracteristica:hover, .tarjeta-caracteristica:focus-within { /* :focus-within para accesibilidad */
+        transform: translateY(-8px);
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .tarjeta-caracteristica i {
+        font-size: 3.5rem; /* 56px */
+        color: var(--primario);
+        margin-bottom: 1.25rem; /* 20px */
+    }
+
+    .tarjeta-caracteristica h3 {
+        margin-bottom: 1rem; /* 16px */
+        color: var(--blanco);
+    }
+
+    .tarjeta-caracteristica p {
+        font-size: 1.3rem;
+        color: #f0f0f0;
+    }
+
+/* Fin - Cinco pasos para energía solar */
+
+
+
+
+/* Sección de Mapa */
+
+.title-mapa {
+    color: var(--oscuro);
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.25rem; 
+}
+.title-mapa i {
+    color: var(--primario);
+}
+
+    #mapaColombia {
+        border-radius: 0px;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1;
+    }
+
+    .leaflet-popup-content {
+        font-size: 14px;
+    }
+
+    .leaflet-popup-content strong {
+        font-size: 16px ;
+    }
+
+    .contenedor-mapa-pequeno { /* Para contacto.html */
+        height: 22rem; /* 350px */
+        width: 100%;
+        border-radius: var(--radio-borde-medio);
+        box-shadow: var(--sombra-suave);
+        overflow: hidden; /* Importante para Leaflet */
+    }
+
+    .contenedor-mapa-grande { /* Para energia-solar.html */
+        height: 28rem; /* 450px */
+        width: 100%;
+        border-radius: var(--radio-borde-medio);
+        box-shadow: var(--sombra-media);
+        overflow: hidden; /* Importante para Leaflet */
+    }
+    .leyenda-mapa {
+        padding: 6px 8px;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .leyenda-mapa h4 {
+        margin: 0 0 8px;
+        color: #333;
+        font-size: 1.1em;
+    }
+    .leyenda-mapa i {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 8px;
+        opacity: 0.7;
+        border: 1px solid #555;
+    }
+
+/* Fin Sección de Mapa */
+
+
+/* ----------------- */
+/* Fin Estilo Inicio */
+/* ----------------- */
+
 
 /* Calculadora */
 #resultado {
@@ -435,9 +708,221 @@ ul.menu-footer i, ul.contact-footer i  {
 /* HTML Energía Solar */
 
 
-/* HTML Aprende e Involúcrate */
 
 /* HTML Aprende e Involúcrate */
+
+    .pagina-aprende {
+        margin: 0;
+        font-family: var(--fuente);
+        background-color: var(--claro);
+        color: var(--oscuro);
+        line-height: 1.6;
+    }
+    
+    .pagina-aprende section {
+        max-width: 1260px;
+        margin: 0 auto;
+    }
+    
+    .pagina-aprende section h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        color: var(--oscuro);
+        
+        font-size: 2.3rem; /* 40px */
+    }
+    
+    /* Estilos para enlaces (submenús educativos) */
+    .grid-submenu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+        
+    }
+
+    .submenu-enlace {
+        display: block;
+        padding: 1rem;
+        background-color: var(--blanco);
+        border: 2px solid var(--eolica);
+        color: var(--eolica);
+        text-align: center;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: var(--borde-radius);
+        transition: all 0.3s ease-in-out;
+        box-shadow: var(--sombra);     
+    
+    }
+
+    .submenu-enlace:hover,
+    .submenu-enlace:focus {
+        background-color: var(--eolica);
+        color: var(--blanco);
+        transform: translateY(-2px);
+    }
+    /* Galería */
+    .galeria-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .galeria-item {
+        background: var(--blanco);
+        border-radius: var(--borde-radius);
+        overflow: hidden;
+        box-shadow: var(--sombra);
+        transition: transform 0.3s;
+    }
+    
+    .galeria-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .galeria-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        
+    }
+    .galeria-item h3 {
+        text-align: center;
+        color: var(--oscuro);
+        font-weight: bold;
+    }
+    .galeria-item p {
+        text-align: center;
+        font-weight: 500;
+    }
+    
+    /* Infografías */
+    .infografias-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .infografia-item img {
+        width: 100%;
+        border-radius: var(--borde-radius);
+        box-shadow: var(--sombra);
+    }
+    
+    /* FAQ */
+    .item-pregunta {
+        background: var(--blanco);
+        border-radius: var(--borde-radius);
+        box-shadow: var(--sombra);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .pregunta {
+        background: var(--gris-azulado-muy-claro);
+        padding: 1rem 1.5rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    
+    .respuesta {
+        padding: 1rem 1.5rem;
+        display: none;
+        border-top: 1px solid var(--color-texto2);
+    }
+    
+    .item-pregunta.activo .respuesta {
+        display: block;
+    }
+
+
+    /* Glosario */
+    #glosario {
+        border-radius: var(--borde-radius);
+        padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+    }
+    #glosario ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    #glosario li {
+        background: var(--blanco);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-left: 5px solid var(--solar);
+        box-shadow: var(--sombra);
+        border-radius: var(--borde-radius);
+    }
+    
+    /* Comunidad y programas */
+    
+
+#comunidad img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--borde-radius);
+        box-shadow: var(--sombra);
+    }
+
+    .programa-tarjeta {
+        background: var(--blanco);
+        padding: 1.5rem;
+        border-radius: var(--radio-borde-medio);
+        margin-bottom: 1.5rem;
+        box-shadow: var(--sombra-suave);
+        border-left: 4px solid var(--primario);
+        transition: transform var(--transicion-media);
+    }
+
+    .programa-tarjeta:hover {
+        transform: translateY(-5px);
+    }
+
+    .programa-tarjeta h3 {
+        color: var(--eolica);
+        margin-bottom: 0.75rem;
+    }
+
+    .programa-tarjeta a {
+        color: var(--eolica);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color var(--transicion-media);
+    }
+
+    .programa-tarjeta a:hover {
+        color: var(--oscuro);
+    }
+
+    .seccion-llamado-accion {
+        background-color: var(--gris-azulado-muy-claro);
+        text-align: center;
+    }
+
+    .seccion-llamado-accion h2 {
+        font-size: 2.5rem; /* 40px */
+        margin-bottom: 1.25rem; /* 20px */
+        color: var(--oscuro);
+    }
+
+    .seccion-llamado-accion p {
+        margin: 0 auto 1.875rem auto; /* 30px */
+        color: var(--gris-texto-suave);
+    }
+
+    
+
+
+/* HTML Aprende e Involúcrate */
+
+
 
 /* HTML Nosotros */
 
@@ -546,6 +1031,14 @@ ul.menu-footer i, ul.contact-footer i  {
 }
 
 
+
+@media (max-width: 1260px) { 
+    
+    .item-pregunta {
+        max-width: 90%;
+    }
+}
+
 @media (max-width: 768px) { 
     
     .seccion-hero h1 {
@@ -564,6 +1057,20 @@ ul.menu-footer i, ul.contact-footer i  {
         font-size: 1.5rem; /* 24px */
         margin-bottom: 1.25rem; /* 20px */
     }
+
+
+
+
+    .item-pregunta {
+        max-width: 90%;
+    }
+
+    
+    .contenedor-mapa-pequeno, .contenedor-mapa-grande {
+        height: 18.75rem; /* 300px */
+    }
+
+
 }
 
 @media (max-width: 480px) {
@@ -596,5 +1103,39 @@ ul.menu-footer i, ul.contact-footer i  {
         font-size: 1.5rem; /* 24px */
     }
 
+    
+
+    .item-pregunta {
+        max-width: 90%;
+    }
+
+
 }
 /* HTML Contáctanos */
+
+
+
+
+    /* Botón flotante */
+.boton-flotante {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--solar);
+    color: var(--oscuro);
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: var(--sombra);
+}
+
+
+
+#graficoTorta {
+  width: 400px !important;
+  height: 400px !important;
+}

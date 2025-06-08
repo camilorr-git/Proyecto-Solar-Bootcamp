@@ -30,4 +30,56 @@ setInterval(() => {
         }
     });
 
+
+    // 1. Funcionalidad del carrusel (específico para inicio.html)
+    const carruselHero = document.querySelector('.carrusel-hero');
+    if (carruselHero) {
+        let indiceDiapositiva = 1;
+        const diapositivas = document.getElementsByClassName("diapositiva");
+        const puntos = document.getElementsByClassName("punto");
+
+        function mostrarDiapositivas(n) {
+            if (diapositivas.length === 0) return;
+
+            if (n > diapositivas.length) { indiceDiapositiva = 1; }
+            if (n < 1) { indiceDiapositiva = diapositivas.length; }
+
+            for (let i = 0; i < diapositivas.length; i++) {
+                diapositivas[i].style.opacity = "0";
+                diapositivas[i].style.zIndex = "0";
+                if (diapositivas[i].querySelector('h1')) diapositivas[i].querySelector('h1').classList.remove('animate__fadeInUp');
+                if (diapositivas[i].querySelector('p')) diapositivas[i].querySelector('p').classList.remove('animate__fadeInUp');
+                if (diapositivas[i].querySelector('.boton')) diapositivas[i].querySelector('.boton').classList.remove('animate__fadeInUp');
+
+            }
+
+            for (let i = 0; i < puntos.length; i++) {
+                puntos[i].className = puntos[i].className.replace(" activo", "");
+            }
+
+            diapositivas[indiceDiapositiva - 1].style.opacity = "1";
+            diapositivas[indiceDiapositiva - 1].style.zIndex = "1";
+             // Re-activar animación para la diapositiva actual
+            if (diapositivas[indiceDiapositiva - 1].querySelector('h1')) diapositivas[indiceDiapositiva - 1].querySelector('h1').classList.add('animate__fadeInUp');
+            if (diapositivas[indiceDiapositiva - 1].querySelector('p')) diapositivas[indiceDiapositiva - 1].querySelector('p').classList.add('animate__fadeInUp');
+            if (diapositivas[indiceDiapositiva - 1].querySelector('.boton')) diapositivas[indiceDiapositiva - 1].querySelector('.boton').classList.add('animate__fadeInUp');
+
+
+            puntos[indiceDiapositiva - 1].className += " activo";
+        }
+
+        window.diapositivaSiguiente = function(n) {
+            mostrarDiapositivas(indiceDiapositiva += n);
+        };
+        window.diapositivaActual = function(n) {
+            mostrarDiapositivas(indiceDiapositiva = n);
+        };
+
+        mostrarDiapositivas(indiceDiapositiva);
+        setInterval(() => {
+            window.diapositivaSiguiente(1);
+        }, 7000); // Aumentado el intervalo para dar tiempo a leer
+    }
+
+
 });

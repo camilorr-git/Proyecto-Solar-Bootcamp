@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aprende e Involúcrate | EcoVolt - Conecta tu hogar al poder del sol</title>
+    <meta name="description" content="Aprende sobre energías renovables, energía solar, eólica, hidrógeno verde y cómo puedes involucrarte. Encuentra respuestas a preguntas frecuentes y recursos útiles.">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Enlace bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Enlace Font Awesome para iconos -->
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
+    <!-- Enlace para graficación con Chart.js     -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <!-- wow animate.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Enlace para importar fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- css general -->
+    <link rel="stylesheet" href="css/style.css">
     <style>
         body{
                 padding-top: 0px !important;
@@ -60,40 +70,202 @@
     <div class="titlePage container-fluid text-center">
         <div class="container py-3">
             <h1>Aprende e Involúcrate</h1>
+                <p class="wow animate__animated animate__fadeInUp text-white py-4" data-wow-delay="0.3s">Conoce más sobre las energías renovables y cómo puedes ser parte del cambio.</p>
+            
             <p class="breadcrumbs pt-5"><a href="index.html"><i class="fa fa-house"></i> Inicio</a> <span> > Aprende e Involúcrate</span></p>
         </div>
     </div>
 
-    
-    <main>
-        <h1>Aprende e Involúcrate</h1>
-        <h2>Conecta tu hogar al poder del sol</h2>
-        <section id="educacion" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">📚 Educación y Conciencia</h2>
-                <p>Descripción de la importancia de la educación y conciencia sobre la energía solar.</p>
-            </div>
-        </section>
-        <section id="involucrate" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">🤝 Involúcrate</h2>
-                <p>Descripción de cómo involucrarse en la energía solar.</p>
-            </div>
-        </section>
-        <section id="proyectos" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">🏗️ Proyectos Comunitarios</h2>
-                <p>Descripción de proyectos comunitarios relacionados con la energía solar.</p>
-            </div>
-        </section>
-        <section id="contacto" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">📞 Contáctanos</h2>
-                <p>Descripción de cómo contactarnos.</p>
+    <main class="pagina-aprende">
+        
+        <section id="submenu-recursos" class="contenedor my-5">
+            <h2 class="text-center my-5">📂 Submenús Educativos</h2>
+            <div class="grid-submenu">
+            <a href="#galeria" class="submenu-enlace">📸 Galería de Fotos y Videos</a>
+            <a href="#info" class="submenu-enlace">📊 Infografías</a>
+            <a href="#glosario" class="submenu-enlace">📚 Glosario de Términos</a>
+            <a href="#faq" class="submenu-enlace">❓Preguntas Frecuentes (FAQ)</a>
+            <a href="#comunidad" class="submenu-enlace">🏘️ Implementar Energía Solar</a>
+            <a href="#programas-gobierno" class="submenu-enlace">🏛️ Programas del Gobierno</a>
             </div>
         </section>
 
+        <section id="galeria" class="my-5">
+            <div class="container">
+                <h2 class="text-center my-5 pt-5">📸 Galería de Fotos y Videos</h2>
+                <p class="text-center">Explora proyectos reales y testimonios en imágenes y videos inspiradores.</p>
+                
+                <div class="galeria-grid">
+                    <div class="galeria-item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <img src="img/aprende-e-involucrate/EPM-comunidad-solar-1.jpg" alt="Instalación solar comunitaria" loading="lazy">
+                        <h3 class="text-center my-5 px-3">Proyecto comunitario en Antioquia</h3>
+                        <p class="px-5">En Antioquia, hay una gran variedad de proyectos comunitarios, muchos de los cuales están impulsados por el gobierno local y la comunidad misma. Estos proyectos abarcan diversas áreas, desde la salud y la educación hasta el desarrollo económico y la infraestructura. </p>
+                    </div>
+                    <div class="galeria-item wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <img src="img/aprende-e-involucrate/energia-solar-transicion-energetica.jpg" alt="Casa con paneles solares" loading="lazy">
+                        <h3 class="text-center my-5 px-3">Instalación residencial en Medellin</h3>
+                        <p class="px-5">En Medellín, existen numerosos proyectos de energía solar, tanto para uso residencial como industrial y empresarial, con el objetivo de reducir costos y mitigar el impacto ambiental. Algunos ejemplos incluyen instalaciones en casas y fincas, centros comerciales, fábricas, y proyectos sociales como el del Centro de Atención al Desamparado San José. </p>
+                    </div>
+                    <div class="galeria-item wow animate__animated animate__fadeInUp text-center p-4" data-wow-delay="0.3s">
+                        <h3 class="my-4">🎥 Videos Educativos</h3>
+                        <p>Aprende sobre energía solar con estos videos informativos:</p>                
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/Cqs7YJEYH1w" title="¿Qué es la energía solar? - Video educativo en español" allowfullscreen></iframe>
+                        </div>
+                        <p>Fuente: Video educativo sobre la importancia de la energía solar.</p>
+                
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/h20bJDZCaCk" title="Beneficios de la energía solar - Video en español" allowfullscreen></iframe>
+                        </div>
+                        <p>Fuente: Explicación clara y sencilla sobre los beneficios de implementar energía solar.</p>
+                    </div>       
+                </div>
+            </div>
+        </section>
+
+        <section id="infografias" class="seccion-infografias my-5">
+            <div class="container">
+            <h2 class="text-center my-5 pt-5">📊 Infografías</h2>
+            <div class="infografias-grid mt-5">
+                <div class="infografia-item">
+                <img src="img/aprende-e-involucrate/infografia-beneficios.jpg" alt="Beneficios de la energía solar">
+                </div>
+                <div class="infografia-item">
+                <img src="img/aprende-e-involucrate/infografia-paneles-solares.jpg" alt="Funcionamiento de un sistema solar fotovoltaico">
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="faq" class="seccion-faqs relleno-seccion my-5 pb-5" aria-labelledby="titulo-faqs">
+            <div class="contenedor">
+                <h2 id="titulo-faqs" class="text-center my-5 pt-5">❓ Preguntas Frecuentes (FAQ)</h2>
+                <div class="faq-lista">
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-que-son-renovables">
+                            <h3>¿Qué son las energías renovables?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-que-son-renovables">
+                            <p>Las energías renovables son aquellas que se obtienen de fuentes naturales inagotables o que se regeneran constantemente. Ejemplos incluyen la energía solar, eólica, hidráulica, geotérmica y de biomasa.</p>
+                        </div>
+                    </div>
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-beneficios-solar">
+                            <h3>¿Cuáles son los beneficios de la energía solar?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-beneficios-solar">
+                            <p>Los beneficios incluyen la reducción de la factura de electricidad, la independencia energética, la disminución de la huella de carbono, bajos costos de mantenimiento y el aumento del valor de la propiedad.</p>
+                        </div>
+                    </div>
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-eolica-colombia">
+                            <h3>¿Es la energía eólica viable para uso residencial en Colombia?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-eolica-colombia">
+                            <p>La energía eólica residencial es viable en zonas con velocidades de viento constantes y adecuadas. En Colombia, algunas regiones costeras y de alta montaña tienen buen potencial. Es fundamental realizar un estudio de viabilidad de sitio.</p>
+                        </div>
+                    </div>
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-hidrogeno-verde">
+                            <h3>¿Qué es el hidrógeno verde?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-hidrogeno-verde">
+                            <p>El hidrógeno verde es hidrógeno producido mediante electrólisis del agua utilizando electricidad generada a partir de fuentes de energía renovables (solar, eólica), lo que resulta en una producción sin emisiones de carbono.</p>
+                        </div>
+                    </div>
+                    <div class="item-pregunta wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                        <div class="pregunta" role="button" tabindex="0" aria-expanded="false" aria-controls="respuesta-financiar-sistema">
+                            <h3>¿Cómo puedo financiar un sistema de energía renovable?</h3>
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="respuesta" id="respuesta-financiar-sistema">
+                            <p>Existen diversas opciones de financiamiento, incluyendo créditos bancarios especializados para energía renovable, fondos de inversión verde y, en algunos casos, incentivos gubernamentales o subsidios. EcoVolt puede asesorarte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="glosario" class="my-5 bg-light">
+            <div class="container">
+            <h2 class="text-center my-5 pb-4">📚 Glosario de Términos</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                <strong>Panel solar fotovoltaico:</strong> Dispositivo compuesto por células que convierten la luz solar en electricidad gracias al efecto fotovoltaico, generado por materiales semiconductores como el silicio.
+                </li>
+                <li class="list-group-item">
+                <strong>Inversor:</strong> Equipo que transforma la corriente continua (DC) generada por los paneles solares en corriente alterna (AC) para el consumo eléctrico convencional.
+                </li>
+                <li class="list-group-item">
+                <strong>Autoconsumo fotovoltaico:</strong> Sistema en el que el usuario produce su propia electricidad para consumo personal, con o sin excedentes que pueden ser vertidos a la red.
+                </li>
+                <li class="list-group-item">
+                <strong>Energía solar térmica:</strong> Tecnología que utiliza colectores solares para aprovechar el calor del sol y calentar un fluido que se emplea en calefacción o agua caliente.
+                </li>
+                <li class="list-group-item">
+                <strong>Energía termosolar (o de concentración):</strong> Usa espejos para concentrar la radiación solar en un punto y generar vapor a alta temperatura que impulsa turbinas para producir electricidad.
+                </li>
+                <li class="list-group-item">
+                <strong>Efecto fotovoltaico:</strong> Fenómeno físico mediante el cual los fotones de la luz solar liberan electrones en un material semiconductor, generando corriente eléctrica.
+                </li>
+                <li class="list-group-item">
+                <strong>Módulo fotovoltaico:</strong> Conjunto de células solares interconectadas encapsuladas en un marco protector que conforma una unidad funcional del sistema fotovoltaico.
+                </li>
+                <li class="list-group-item">
+                <strong>Reciclaje de módulos solares:</strong> Proceso de recuperación y reutilización de materiales presentes en los paneles solares al final de su vida útil, gestionados como RAEE.
+                </li>
+            </ul>
+            </div>
+        </section>
+        
+
+        <section id="comunidad" class="py-5 my-5">
+            <div class="container">
+                <h2 class="text-center my-5">🏘️ Cómo Implementar Energía Solar en tu Comunidad</h2>
+                <img src="img/aprende-e-involucrate/comunidades-solares.jpg" alt="">
+            </div>
+        </section>
+
+        <section id="programas-gobierno" class="py-5 my-5">
+            <div class="container">
+                <h2 class="text-center my-5">🏛️ Enlaces a Programas del Gobierno</h2>
+                <p class="py-2">Explora programas vigentes de apoyo a la energía solar:</p>
+
+                <div class="programa-tarjeta">
+                    <h3>Programa Colombia Solar</h3>
+                        <a href="https://www.minenergia.gov.co/es/sala-de-prensa/noticias-index/minenerg%C3%ADa-firma-decreto-que-pone-en-marcha-el-programa-colombia-solar-para-generar-energ%C3%ADa-limpia-en-estratos-1-2-y-3/" target="_blank">mas información</a>
+                </div>
+
+                <div class="programa-tarjeta">
+                    <h3>Beneficios Tributarios por Energía Renovable</h3>
+                    <a href="https://beneficios-tributarios.minambiente.gov.co/" target="_blank">mas información</a>
+                </div>
+
+                <div class="programa-tarjeta">
+                    <h3>Unidad de Planeación Minero Energética (UPME)</h3>
+                    <a href="https://www.upme.gov.co/" target="_blank">mas información</a>
+                </div>
+                
+                <div class="programa-tarjeta">
+                    <h3>Energía renovable en todo el mundo: 1965-2022</h3>
+                    <a href="https://www.kaggle.com/datasets/belayethossainds/renewable-energy-world-wide-19652022" target="_blank">mas información</a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <section class="seccion-llamado-accion relleno-seccion texto-centrado py-5 my-5">
+        <div class="contenedor">
+            <h2>¿Tienes más preguntas?</h2>
+            <p>Contáctanos y nuestro equipo de expertos te ayudará a resolverlas.</p>
+            <a href="contactenos.html" class="boton boton-secundario">Pregunta a un Experto</a>
+        </div>
+    </section>
+</main>
 
     <footer class="container-fluid pie-pagina">
         <div class="container contenedor py-5">
@@ -147,8 +319,26 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+
+    
+    <a href="inicio.html#seccion-calculadora" class="boton-flotante" aria-label="Calcular Ahorro Energético">
+        <i class="fas fa-calculator" aria-hidden="true"></i>
+    </a>    
+
+    <!-- Js bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- Js para gráfico específico con Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+    <!-- Js mapas interactivos -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <!-- Js para animaciones en css WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    
+    <!-- \Ss General -->
+    <script src="js/script.js"></script>
+    <script src="js/script-faq.js"></script>
 </body>
 </html>
 

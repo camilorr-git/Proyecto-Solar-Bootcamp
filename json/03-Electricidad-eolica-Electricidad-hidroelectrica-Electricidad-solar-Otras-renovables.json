@@ -1,0 +1,458 @@
+[
+  {
+    "Code": "COL",
+    "year": 1965,
+    "wind": 0.0,
+    "hydro": 3.5439494,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1966,
+    "wind": 0.0,
+    "hydro": 3.9372194,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1967,
+    "wind": 0.0,
+    "hydro": 4.3892536,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1968,
+    "wind": 0.0,
+    "hydro": 4.8910117,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1969,
+    "wind": 0.0,
+    "hydro": 5.4379735,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1970,
+    "wind": 0.0,
+    "hydro": 6.05274,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1971,
+    "wind": 0.0,
+    "hydro": 6.4234085,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1972,
+    "wind": 0.0,
+    "hydro": 7.115021,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1973,
+    "wind": 0.0,
+    "hydro": 7.7433486,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1974,
+    "wind": 0.0,
+    "hydro": 8.7920685,
+    "solar": 0.0,
+    "otherRenewables": 0.0
+  },
+  {
+    "Code": "COL",
+    "year": 1975,
+    "wind": 0.0,
+    "hydro": 9.7323,
+    "solar": 0.0,
+    "otherRenewables": 0.189
+  },
+  {
+    "Code": "COL",
+    "year": 1976,
+    "wind": 0.0,
+    "hydro": 10.22642,
+    "solar": 0.0,
+    "otherRenewables": 0.202
+  },
+  {
+    "Code": "COL",
+    "year": 1977,
+    "wind": 0.0,
+    "hydro": 10.451812,
+    "solar": 0.0,
+    "otherRenewables": 0.192
+  },
+  {
+    "Code": "COL",
+    "year": 1978,
+    "wind": 0.0,
+    "hydro": 12.07144,
+    "solar": 0.0,
+    "otherRenewables": 0.206
+  },
+  {
+    "Code": "COL",
+    "year": 1979,
+    "wind": 0.0,
+    "hydro": 13.2593,
+    "solar": 0.0,
+    "otherRenewables": 0.216
+  },
+  {
+    "Code": "COL",
+    "year": 1980,
+    "wind": 0.0,
+    "hydro": 14.44702,
+    "solar": 0.0,
+    "otherRenewables": 0.227
+  },
+  {
+    "Code": "COL",
+    "year": 1981,
+    "wind": 0.0,
+    "hydro": 14.26534,
+    "solar": 0.0,
+    "otherRenewables": 0.212
+  },
+  {
+    "Code": "COL",
+    "year": 1982,
+    "wind": 0.0,
+    "hydro": 15.238536,
+    "solar": 0.0,
+    "otherRenewables": 0.231
+  },
+  {
+    "Code": "COL",
+    "year": 1983,
+    "wind": 0.0,
+    "hydro": 15.365776,
+    "solar": 0.0,
+    "otherRenewables": 0.234
+  },
+  {
+    "Code": "COL",
+    "year": 1984,
+    "wind": 0.0,
+    "hydro": 17.14022,
+    "solar": 0.0,
+    "otherRenewables": 0.255
+  },
+  {
+    "Code": "COL",
+    "year": 1985,
+    "wind": 0.0,
+    "hydro": 18.440771,
+    "solar": 0.0,
+    "otherRenewables": 0.267
+  },
+  {
+    "Code": "COL",
+    "year": 1986,
+    "wind": 0.0,
+    "hydro": 21.332952,
+    "solar": 0.0,
+    "otherRenewables": 0.266
+  },
+  {
+    "Code": "COL",
+    "year": 1987,
+    "wind": 0.0,
+    "hydro": 23.24756,
+    "solar": 0.0,
+    "otherRenewables": 0.268
+  },
+  {
+    "Code": "COL",
+    "year": 1988,
+    "wind": 0.0,
+    "hydro": 24.5194,
+    "solar": 0.0,
+    "otherRenewables": 0.274
+  },
+  {
+    "Code": "COL",
+    "year": 1989,
+    "wind": 0.0,
+    "hydro": 26.78212,
+    "solar": 0.0,
+    "otherRenewables": 0.274
+  },
+  {
+    "Code": "COL",
+    "year": 1990,
+    "wind": 0.0,
+    "hydro": 27.495852,
+    "solar": 0.0,
+    "otherRenewables": 0.274
+  },
+  {
+    "Code": "COL",
+    "year": 1991,
+    "wind": 0.0,
+    "hydro": 27.72608,
+    "solar": 0.0,
+    "otherRenewables": 0.269
+  },
+  {
+    "Code": "COL",
+    "year": 1992,
+    "wind": 0.0,
+    "hydro": 22.280584,
+    "solar": 0.0,
+    "otherRenewables": 0.34
+  },
+  {
+    "Code": "COL",
+    "year": 1993,
+    "wind": 0.0,
+    "hydro": 27.856392,
+    "solar": 0.0,
+    "otherRenewables": 0.389
+  },
+  {
+    "Code": "COL",
+    "year": 1994,
+    "wind": 0.0,
+    "hydro": 32.05839,
+    "solar": 0.0,
+    "otherRenewables": 0.444
+  },
+  {
+    "Code": "COL",
+    "year": 1995,
+    "wind": 0.0,
+    "hydro": 31.9894,
+    "solar": 0.0,
+    "otherRenewables": 0.477
+  },
+  {
+    "Code": "COL",
+    "year": 1996,
+    "wind": 0.0,
+    "hydro": 35.287624,
+    "solar": 0.0,
+    "otherRenewables": 0.496
+  },
+  {
+    "Code": "COL",
+    "year": 1997,
+    "wind": 0.0,
+    "hydro": 31.47576,
+    "solar": 0.0,
+    "otherRenewables": 0.483
+  },
+  {
+    "Code": "COL",
+    "year": 1998,
+    "wind": 0.0,
+    "hydro": 30.781685,
+    "solar": 0.0,
+    "otherRenewables": 0.532
+  },
+  {
+    "Code": "COL",
+    "year": 1999,
+    "wind": 0.0,
+    "hydro": 33.700657,
+    "solar": 0.0,
+    "otherRenewables": 0.457
+  },
+  {
+    "Code": "COL",
+    "year": 2000,
+    "wind": 0.0,
+    "hydro": 31.75,
+    "solar": 0.01,
+    "otherRenewables": 0.18
+  },
+  {
+    "Code": "COL",
+    "year": 2001,
+    "wind": 0.0,
+    "hydro": 31.48,
+    "solar": 0.01,
+    "otherRenewables": 0.18
+  },
+  {
+    "Code": "COL",
+    "year": 2002,
+    "wind": 0.0,
+    "hydro": 33.63,
+    "solar": 0.01,
+    "otherRenewables": 0.17
+  },
+  {
+    "Code": "COL",
+    "year": 2003,
+    "wind": 0.0,
+    "hydro": 35.81,
+    "solar": 0.01,
+    "otherRenewables": 0.16
+  },
+  {
+    "Code": "COL",
+    "year": 2004,
+    "wind": 0.05,
+    "hydro": 39.68,
+    "solar": 0.01,
+    "otherRenewables": 0.15
+  },
+  {
+    "Code": "COL",
+    "year": 2005,
+    "wind": 0.05,
+    "hydro": 39.4,
+    "solar": 0.01,
+    "otherRenewables": 0.16
+  },
+  {
+    "Code": "COL",
+    "year": 2006,
+    "wind": 0.06,
+    "hydro": 42.31,
+    "solar": 0.01,
+    "otherRenewables": 0.2
+  },
+  {
+    "Code": "COL",
+    "year": 2007,
+    "wind": 0.05,
+    "hydro": 44.0,
+    "solar": 0.01,
+    "otherRenewables": 0.19
+  },
+  {
+    "Code": "COL",
+    "year": 2008,
+    "wind": 0.05,
+    "hydro": 45.94,
+    "solar": 0.01,
+    "otherRenewables": 0.17
+  },
+  {
+    "Code": "COL",
+    "year": 2009,
+    "wind": 0.06,
+    "hydro": 40.64,
+    "solar": 0.01,
+    "otherRenewables": 0.33
+  },
+  {
+    "Code": "COL",
+    "year": 2010,
+    "wind": 0.04,
+    "hydro": 40.0,
+    "solar": 0.01,
+    "otherRenewables": 0.55
+  },
+  {
+    "Code": "COL",
+    "year": 2011,
+    "wind": 0.04,
+    "hydro": 48.39,
+    "solar": 0.01,
+    "otherRenewables": 0.37
+  },
+  {
+    "Code": "COL",
+    "year": 2012,
+    "wind": 0.05,
+    "hydro": 47.11,
+    "solar": 0.01,
+    "otherRenewables": 0.4
+  },
+  {
+    "Code": "COL",
+    "year": 2013,
+    "wind": 0.06,
+    "hydro": 49.76,
+    "solar": 0.01,
+    "otherRenewables": 0.65
+  },
+  {
+    "Code": "COL",
+    "year": 2014,
+    "wind": 0.07,
+    "hydro": 47.25,
+    "solar": 0.01,
+    "otherRenewables": 0.73
+  },
+  {
+    "Code": "COL",
+    "year": 2015,
+    "wind": 0.07,
+    "hydro": 47.94,
+    "solar": 0.01,
+    "otherRenewables": 0.97
+  },
+  {
+    "Code": "COL",
+    "year": 2016,
+    "wind": 0.05,
+    "hydro": 48.46,
+    "solar": 0.01,
+    "otherRenewables": 1.01
+  },
+  {
+    "Code": "COL",
+    "year": 2017,
+    "wind": 0.0,
+    "hydro": 60.64,
+    "solar": 0.01,
+    "otherRenewables": 0.73
+  },
+  {
+    "Code": "COL",
+    "year": 2018,
+    "wind": 0.04,
+    "hydro": 59.16,
+    "solar": 0.02,
+    "otherRenewables": 0.84
+  },
+  {
+    "Code": "COL",
+    "year": 2019,
+    "wind": 0.06,
+    "hydro": 52.98,
+    "solar": 0.13,
+    "otherRenewables": 1.11
+  },
+  {
+    "Code": "COL",
+    "year": 2020,
+    "wind": 0.01,
+    "hydro": 48.44,
+    "solar": 0.19,
+    "otherRenewables": 1.3
+  },
+  {
+    "Code": "COL",
+    "year": 2021,
+    "wind": 0.06,
+    "hydro": 58.19,
+    "solar": 0.32,
+    "otherRenewables": 1.02
+  }
+]

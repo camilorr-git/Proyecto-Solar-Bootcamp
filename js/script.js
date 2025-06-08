@@ -1,32 +1,126 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Inicializar el mapa sin zoom con scroll
-    const mapa = L.map('mapaColombia', {
-        scrollWheelZoom: false // Desactivar zoom con scroll por defecto
-    }).setView([3.7944, -72.7172], 5);
 
-    // Activar capa base
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap'
-    }).addTo(mapa);
 
-    // Marcadores
-    L.marker([4.7110, -74.0721]).addTo(mapa)
-        .bindPopup('Bogotá: Potencial solar medio')
-        .openPopup();
+    
 
-    L.marker([6.2442, -75.5812]).addTo(mapa)
-        .bindPopup('Medellín: Alto potencial solar');
+ //  Funcionalidad del mapa Leaflet
+    function inicializarMapa(idMapa, coordenadas, zoom, textoPopup = 'Ubicación') {
+        const elementoMapa = document.getElementById(idMapa);
+        if (elementoMapa && typeof L !== 'undefined') {
+            try {
+                // Verificar si el mapa ya está inicializado
+                if (elementoMapa._leaflet_id) {
+                    // Si ya está inicializado, no hacer nada o remover y recrear
+                    // console.log(`Mapa ${idMapa} ya inicializado.`);
+                    return elementoMapa._leaflet_map; // Retornar la instancia existente
+                }
+                const mapa = L.map(idMapa).setView(coordenadas, zoom);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(mapa);
+                L.marker(coordenadas).addTo(mapa)
+                    .bindPopup(textoPopup).openPopup();
+                elementoMapa._leaflet_map = mapa; // Guardar la instancia para futuras referencias
+                return mapa;
+            } catch (e) {
+                console.error(`Error al inicializar el mapa ${idMapa}:`, e);
+                return null;
+            }
+        } else if (elementoMapa) {
+            console.warn(`Leaflet no cargado o el elemento del mapa ${idMapa} no encontrado.`);
+        }
+        return null;
+    }
 
-    L.marker([3.4372, -76.5226]).addTo(mapa)
-        .bindPopup('Cali: Potencial solar medio');
+    // Inicializar mapa de contacto en contacto.html
+    if (document.getElementById('mapa-contacto')) {
+        inicializarMapa('mapa-contacto', [6.2081, -75.5701], 13, 'EcoVolt - Oficina Principal en el poblado, Medellin');
+    }
 
-    // Detectar si se presiona Ctrl y permitir zoom con scroll
-    mapa.getContainer().addEventListener('wheel', function (e) {
+    // Inicializar mapa solar en energia-solar.html
+    const mapaSolarElement = document.getElementById('mapa-solar');
+    if (mapaSolarElement) {
+        const coordenadasColombia = [6.2081, -75.5701];
+        const mapaSolar = inicializarMapa('mapa-solar', coordenadasColombia, 5, 'Potencial Solar en Colombia');
+
+        if (mapaSolar) {
+            const zonasPotencialSolar = [
+                { coords: [11.5, -72.5], name: "La Guajira", potential: 'Muy Alto', color: 'red' },
+                { coords: [10.0, -75.0], name: "Costa Caribe (Atlántico, Magdalena)", potential: 'Alto', color: 'orange' },
+                { coords: [4.0, -73.0], name: "Llanos Orientales (Meta, Casanare)", potential: 'Alto', color: 'orange' },
+                { coords: [6.2, -75.6], name: "Región Andina (Antioquia, Valle)", potential: 'Medio', color: 'yellow' },
+                { coords: [1.0, -72.0], name: "Amazonía", potential: 'Medio-Bajo', color: 'lightgreen' },
+                { coords: [2.5, -77.0], name: "Costa Pacífica", potential: 'Bajo (alta nubosidad)', color: 'lightblue' }
+            ];
+
+            zonasPotencialSolar.forEach(zona => {
+                L.circleMarker(zona.coords, {
+                    radius: 8,
+                    fillColor: zona.color,
+                    color: "#000",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.7
+                }).addTo(mapaSolar).bindPopup(`<strong>${zona.name}</strong><br>Potencial Solar Estimado: ${zona.potential}`);
+            });
+
+            const leyenda = L.control({ position: 'bottomright' });
+            leyenda.onAdd = function (map) {
+                const div = L.DomUtil.create('div', 'info leyenda-mapa');
+                
+                const niveles = [
+                    { color: 'red', label: 'Muy Alto' },
+                    { color: 'orange', label: 'Alto' },
+                    { color: 'yellow', label: 'Medio' },
+                    { color: 'lightgreen', label: 'Medio-Bajo' },
+                    { color: 'lightblue', label: 'Bajo' }
+                ];
+                div.innerHTML = '<h4>Potencial Solar Estimado</h4>';
+                for (let i = 0; i < niveles.length; i++) {
+                    div.innerHTML +=
+                        '<i style="background:' + niveles[i].color + '"></i> ' + niveles[i].label + '<br>';
+                }
+                return div;
+            };
+            leyenda.addTo(mapaSolar);
+        }
+    }
+
+        // Activar scroll solo si se mantiene Ctrl presionado
+        // mapaSolar.getContainer().addEventListener('wheel', function (e) {
+        //     if (e.ctrlKey) {
+        //         mapaSolar.scrollWheelZoom.enable();
+        //     } else {
+        //         mapaSolar.scrollWheelZoom.disable();
+        //     }
+        // });
+
+        // Dentro de tu if (mapaSolar) { ... }
+if (mapaSolar) {
+    // 1. Desactivar el zoom con scroll POR DEFECTO
+    mapaSolar.scrollWheelZoom.disable(); // <- Esto es clave
+
+    // 2. Activar zoom SOLO con Ctrl presionado
+    mapaSolar.getContainer().addEventListener('wheel', function(e) {
         if (e.ctrlKey) {
-            mapa.scrollWheelZoom.enable();  // Activar si Ctrl está presionado
+            // Permite zoom solo si Ctrl está presionado
+            mapaSolar.scrollWheelZoom.enable();
         } else {
-            mapa.scrollWheelZoom.disable(); // Desactivar en otros casos
+            // Bloquea el zoom y el scroll normal en el mapa
+            e.preventDefault();
+            mapaSolar.scrollWheelZoom.disable();
         }
     });
+
+    // 3. Opcional: Resetear al soltar Ctrl (para mayor seguridad)
+    document.addEventListener('keyup', function(e) {
+        if (e.key === 'Control') {
+            mapaSolar.scrollWheelZoom.disable();
+        }
+    });
+}
+
+
+
 });
