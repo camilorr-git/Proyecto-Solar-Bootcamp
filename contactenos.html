@@ -22,7 +22,6 @@
                 padding-top: 0px !important;
         }
     </style>
-
 </head>
 <body>
 
@@ -73,57 +72,65 @@
             <p class="breadcrumbs pt-5"><a href="index.html"><i class="fa fa-house"></i> Inicio</a> <span> > Contáctanos</span></p>
         </div>
     </div>
-        <main class="pagina-contacto container my-5">
-            <section class="seccion-info-contacto-formulario relleno-seccion" aria-labelledby="titulo-contacto">
-                <div class="contenedor">
-                    <div class="grid-contacto">
-                        <div class="info-contacto">
-                            <h2 id="titulo-contacto">Información de Contacto</h2>
-                            <address> <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> El Poblado, Medellin, Colombia</p>
-                                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+5712345678">+57 1 2345678</a></p>
-                                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@ecovolt.com">info@ecovolt.com</a></p>
-                                <p><i class="fas fa-clock" aria-hidden="true"></i> Lunes a Viernes: 9:00 AM - 5:00 PM</p>
-                            </address>
-                            <div class="iconos-sociales-contacto" aria-label="Redes sociales de EcoVolt">
-                                <a href="#" aria-label="Facebook de EcoVolt"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" aria-label="Twitter de EcoVolt"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#" aria-label="Instagram de EcoVolt"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                                <a href="#" aria-label="LinkedIn de EcoVolt"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
-                            <div id="mapa-contacto" class="contenedor-mapa-pequeno" aria-label="Mapa de ubicación de EcoVolt">
-                                </div>
-                        </div>
-                        <div class="formulario-contacto">
-                            <h2>Envíanos un Mensaje</h2>
-                            <form action="https://formspree.io/f/xzzrveaj" method="POST">
-                                <div class="grupo-formulario">
-                                    <label for="nombre">Nombre Completo:</label>
-                                    <input type="text" id="nombre" name="nombre" required autocomplete="name">
-                                </div>
-                                <div class="grupo-formulario">
-                                    <label for="correo">Correo Electrónico:</label>
-                                    <input type="email" id="correo" name="correo" required autocomplete="email">
-                                </div>
-                                <div class="grupo-formulario">
-                                    <label for="telefono">Teléfono (Opcional):</label>
-                                    <input type="tel" id="telefono" name="telefono" autocomplete="tel">
-                                </div>
-                                <div class="grupo-formulario">
-                                    <label for="asunto">Asunto:</label>
-                                    <input type="text" id="asunto" name="asunto" required>
-                                </div>
-                                <div class="grupo-formulario">
-                                    <label for="mensaje">Tu Mensaje:</label>
-                                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                                </div>
-                                <div class="form-feedback" aria-live="polite"></div>
-                                <button type="submit" class="boton boton-primario">Enviar Mensaje</button>
-                            </form>
+
+    <main class="pagina-contacto container my-5">
+        <section class="py-5 my-5 seccion-info-contacto-formulario relleno-seccion" aria-labelledby="titulo-contacto">
+            <div class="container py-5">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-sm-12 col-md-12 col-lg-6 order-lg-last order-1 bg-white p-5 rounded shadow info-contacto">
+                        <h2 id="titulo-contacto" class="text-center mb-5">Información de Contacto</h2>
+                        <address>
+                            <p class="d-flex align-items-center text-muted mb-3">
+                                <i class="fas fa-map-marker-alt me-3"></i> El Poblado, Medellin, Colombia</p>
+                            <p class="d-flex align-items-center text-muted mb-3">
+                                <i class="fas fa-phone me-3"></i> <a href="tel:+5712345678">+57 1 2345678</a></p>
+                            <p class="d-flex align-items-center text-muted mb-3">
+                                <i class="fas fa-envelope me-3"></i> <a href="mailto:info@ecovolt.com">info@ecovolt.com</a></p>
+                            <p class="d-flex align-items-center text-muted mb-3">
+                                <i class="fas fa-clock me-3"></i> Lunes a Viernes: 9:00 AM - 5:00 PM</p>
+                        </address>
+                        <div class="d-flex justify-content-center gap-3 mt-4 iconos-sociales-contacto" aria-label="Redes sociales de EcoVolt">
+                            <a href="#" aria-label="Facebook de EcoVolt"><i class="fab fa-facebook fs-3" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Twitter de EcoVolt"><i class="fab fa-twitter fs-3" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="Instagram de EcoVolt"><i class="fab fa-instagram fs-3" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="LinkedIn de EcoVolt"><i class="fab fa-linkedin fs-3" aria-hidden="true"></i></a>
                         </div>
                     </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 order-lg-last order-first bg-white p-5 rounded shadow formulario-contacto">
+                        <h2 class="text-center mb-5">Envíanos un Mensaje</h2>
+                        <form action="https://formspree.io/f/xzzrveaj" method="POST">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre Completo:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required autocomplete="name" class="form-control" >
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo Electrónico:</label>
+                                <input type="email" id="correo" name="correo" class="form-control" placeholder="Ingrese su correo electrónico" required autocomplete="email" aria-describedby="ayuda-correo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono (Opcional):</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número de teléfono" autocomplete="tel" class="form-control" >
+                            </div>
+                            <div class="mb-3">
+                                <label for="asunto" class="form-label">Asunto:</label>
+                                <input type="text" id="asunto" name="asunto" placeholder="Ingrese el asunto del mensaje" required class="form-control" >
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Tu Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" placeholder="Ingresa tu mensaje aquí..." rows="5" required class="form-control" ></textarea>
+                            </div>   
+
+
+                            <div class="mt-5 botones-pagina-1">
+                                <button type="submit" class="boton btn btn-warning w-100">Enviar Mensaje</button>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
     <footer class="container-fluid pie-pagina">
         <div class="container contenedor py-5">
@@ -164,7 +171,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-8 col-md-8  py-2" >
+                <div class="col-sm-8 col-md-8 py-2" >
                     <p>&copy; 2025 EcoVolt. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-sm-4 col-md-4 iconos-sociales text-end py-2">

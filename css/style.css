@@ -97,12 +97,12 @@ body {
         text-align: center;
         box-shadow: var(--sombra-suave);
     }
-
+/* 
     .boton:hover, .boton:focus {
         outline: none;
         transform: translateY(-2px);
         box-shadow: var(--sombra-media);
-    }
+    } */
 
     .botones-pagina-1 {
         display: flex;
@@ -337,7 +337,7 @@ body {
 /* Fin estilo general sub paginas */
 
 /* -------------------- */
-/* Inicio Estilo Inicio */
+/* Inicio Estilo pagina Inicio */
 /* -------------------- */
 
 .image-about {
@@ -348,7 +348,6 @@ body {
 }
 
 /* Inicio Resumen del proyecto EcoVolt */
-
 
 .contenido-bienvenida p {
     font-size: 1.8rem; /* ~17.6px */
@@ -363,13 +362,7 @@ body {
     font-weight: bold;
 }
 
-
-
-
-
-
 /* Inicio Resumen del proyecto EcoVolt */
-
 
 /* call-to-action */
 
@@ -416,8 +409,7 @@ body {
 
 /* call-to-action */
 
-
-/* Inicio seccion de datos historicos */
+/* Inicio sección de datos históricos */
 
 /* Tarjetas Históricos */
 .tarjeta-historicos {
@@ -472,9 +464,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-
-
-/* Fin  seccion de datos historicos */
+/* Fin  sección de datos históricos */
 
 
 
@@ -560,11 +550,20 @@ body {
         margin-bottom: 1rem;
     }
 
+    /* Calculadora */
+#resultado {
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+#resultado.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Fin Estilo de Calculadora */
 
 /* Inicio - Cinco pasos para energía solar */
-
 
     /* Sección de Características */
     .seccion-caracteristicas {
@@ -577,8 +576,6 @@ body {
         color: var(--blanco);
         font-size: 2.5rem;
     }
-
-
 
     .tarjeta-caracteristica {
         display: flex;
@@ -613,9 +610,6 @@ body {
     }
 
 /* Fin - Cinco pasos para energía solar */
-
-
-
 
 /* Sección de Mapa */
 
@@ -688,25 +682,17 @@ body {
 
 
 /* ----------------- */
-/* Fin Estilo Inicio */
+/* Fin Estilo pagina Inicio */
 /* ----------------- */
 
 
-/* Calculadora */
-#resultado {
-    transition: all 0.5s ease;
-    opacity: 0;
-    transform: translateY(20px);
-}
-#resultado.mostrar {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 
 
 
-/* Pie de Página */
+/* ------------------------------------ */
+/* Inicio Código Footer - Pie de Página */
+/* ------------------------------------ */
 .pie-pagina {
     background-color: var(--oscuro);
     color: var(--claro);
@@ -785,23 +771,20 @@ ul.menu-footer i, ul.contact-footer i  {
 }
 
 
-/* Pie de Página */
-
-
 /* Botón Flotante */
 .boton-flotante {
     position: fixed;
-    bottom: 1.875rem; /* 30px */
-    right: 1.875rem; /* 30px */
+    bottom: 1.875rem; 
+    right: 1.875rem; 
     background-color: var(--primario);
     color: var(--oscuro);
     border-radius: 50%;
-    width: 3.75rem; /* 60px */
-    height: 3.75rem; /* 60px */
+    width: 55px;
+    height: 55px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem; /* ~29px */
+    font-size: 24px;
     box-shadow: var(--sombra-profunda);
     z-index: 9999;
     transition: background-color var(--transicion-media), transform var(--transicion-media), box-shadow var(--transicion-media);
@@ -821,65 +804,31 @@ ul.menu-footer i, ul.contact-footer i  {
     color: var(--oscuro);
 }
 
-@keyframes pulso {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0.7), var(--sombra-profunda);
-    }
-    70% {
-        box-shadow: 0 0 0 1.25rem rgba(255, 199, 44, 0), var(--sombra-profunda); /* 20px */
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0), var(--sombra-profunda);
-    }
-}
 
 
 
-@media (max-width: 991.98px) {
-
-    /* Clase de items del menu (etiqueta a) en tablets y móviles */
-    .navbar-nav .nav-link {
-        color: var(--color-texto2);
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 10px 20px;
-        margin: 4px 0;
-        border-radius: 6px;
-        transition: all 0.3s ease;
-        display: block;
-        text-align: center;
-        font-weight: 500;
-    }
-    /* Clase de efecto de item del menu (etiqueta a) en tablets y móviles */
-    .navbar-nav .nav-link:hover{        
-        background-color: var(--color-texto2);
-        color: var(--color-azul);
-    }
-    /* Clase estilo item del menu (etiqueta a) Menu Activo en tablets y móviles */
-    .navbar-nav .nav-link.active {
-        color: var(--color-azul);
-        background-color: var(--color-texto2);
-        font-weight: bold;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    /* Desactivación de Linea de efecto subrayado en items del menu (etiqueta a) */
-    .navbar-nav .nav-link:after {
-        content: none !important;
-    }
-    /* Espaciado de contenedor de div subnav */
-    .navbar-collapse {
-        margin: 20px 0;
-    }
-}
+/* -------------------------------- */
+/*Fin código Footer - Pie de Página */
+/* -------------------------------- */
 
 
 
-/* HTML Energía Solar */
 
-/* HTML Energía Solar */
+/* -------------------------------- */
+/* Inicia Estilo Energía Solar */
+/* -------------------------------- */
 
 
 
-/* HTML Aprende e Involúcrate */
+
+/* -------------------------------- */
+/* tERMINA Estilo Energía Solar */
+/* -------------------------------- */
+
+
+/* -------------------------------- */
+/* Inicia Estilo Aprende e Involúcrate */
+/* -------------------------------- */
 
     .pagina-aprende {
         margin: 0;
@@ -1034,7 +983,7 @@ ul.menu-footer i, ul.contact-footer i  {
     /* Comunidad y programas */
     
 
-#comunidad img {
+    #comunidad img {
         width: 100%;
         height: auto;
         border-radius: var(--borde-radius);
@@ -1087,39 +1036,93 @@ ul.menu-footer i, ul.contact-footer i  {
         color: var(--gris-texto-suave);
     }
 
-    
-
-
-/* HTML Aprende e Involúcrate */
-
-
-
-/* HTML Nosotros */
-
-/* HTML Nosotros */
+/* -------------------------------- */
+/* Termina Estilo Aprende e Involúcrate */
+/* -------------------------------- */
 
 
 
-/* HTML Contáctanos */
+/* -------------------------------- */
+/* Inicia Estilo Nosotros */
+/* -------------------------------- */
+
+.fondo-claro {
+    background-color: var(--gris-azulado-muy-claro);
+}
+
+.item-servicio {
+    background-color: var(--blanco);
+    border-radius: var(--radio-borde-medio);
+    box-shadow: var(--sombra-media);
+    height: 100%; 
+}
+
+.item-servicio h3 {
+    color: var(--primario);
+    margin-bottom: 1rem;
+    font-size: 2.5rem; 
+}
+
+.item-caracteristica {
+    background-color: var(--blanco);
+    padding: 2.5rem; 
+    border-radius: var(--radio-borde-medio);
+    box-shadow: var(--sombra-media);
+    margin-bottom: 1.25rem;
+    transition: transform var(--transicion-media), box-shadow var(--transicion-media);
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.equipo-card:hover, .item-servicio:hover, .item-servicio:focus-within, .item-caracteristica:hover, .item-caracteristica:focus-within {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-profunda);
+}
+
+.item-caracteristica i {
+    color: var(--primario);
+    margin-bottom: 1rem;
+}
+
+.item-caracteristica h3 {
+    color: var(--oscuro);
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.equipo-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.equipo-card h3 {
+    font-size: 1.6rem;
+}
+.equipo-card img {
+    height: 350px;
+    object-fit: cover;
+}
+
+
+
+/* -------------------------------- */
+/* Termina Estilo Nosotros */
+/* -------------------------------- */
+
+
+
+/* -------------------------------- */
+/* Inicia Estilo Contáctenos */
+/* -------------------------------- */
 
 
 /* Estilos para la página de Contacto */
-.pagina-contacto .grid-contacto {
-    display: grid;
-    grid-template-columns: 1fr; /* Stack en móviles por defecto */
-    gap: 2.5rem; /* 40px */
-    align-items: flex-start;
-}
-@media (min-width: 992px) { /* Dos columnas en pantallas grandes */
-    .pagina-contacto .grid-contacto {
-        grid-template-columns: 1fr 1.2fr; /* Formulario un poco más ancho */
-    }
-}
+
 
 
 .pagina-contacto .info-contacto,
 .pagina-contacto .formulario-contacto {
-    
     background-color: var(--blanco);
     padding: 2.5rem; /* 40px */
     border-radius: var(--radio-borde-medio);
@@ -1128,14 +1131,14 @@ ul.menu-footer i, ul.contact-footer i  {
 
 .pagina-contacto .info-contacto h2,
 .pagina-contacto .formulario-contacto h2 {
-    font-size: 2rem; /* 32px */
+    font-size: 2.5rem; /* 32px */
     margin-bottom: 1.875rem; /* 30px */
     color: var(--oscuro);
     text-align: center;
 }
 
 .pagina-contacto .info-contacto p {
-    font-size: 1.1rem; /* ~17.6px */
+    font-size: 1.5rem; /* ~17.6px */
     margin-bottom: 1rem; /* 16px */
     color: var(--gris-texto-suave);
     display: flex;
@@ -1175,32 +1178,33 @@ ul.menu-footer i, ul.contact-footer i  {
     outline: none;
 }
 
-
-/* Sección Hero (General para otras páginas) */
-.seccion-hero {
-    /* Corregida la ruta de la imagen: asumiendo que 'img' está al mismo nivel que 'css' */
-    background: linear-gradient(rgba(14, 89, 174, 0.7), rgba(30, 42, 56, 0.7)), url('../img/images.jpg') no-repeat center center/cover;
-    color: var(--blanco);
-    text-align: center;
-    padding: 6.25rem 1.25rem; /* 100px 20px */
-    margin-bottom: 2.5rem; /* 40px */
-}
-
-.seccion-hero h1 {
-    font-size: 3.5rem; /* 56px */
-    margin-bottom: 1.25rem; /* 20px */
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para legibilidad */
-}
-
-.seccion-hero p {
-    font-size: 1.5rem; /* 24px */
-    max-width: 50rem; /* 800px */
-    margin: 0 auto 1.875rem auto; /* 30px */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+.pagina-contacto input, .pagina-contacto textarea{
+    font-size: 1.2rem;
 }
 
 
+/* -------------------------------- */
+/* Inicia Estilo Contáctenos */
+/* -------------------------------- */
+
+
+
+
+/* =============================== */
+/* Medidas Responsive Dispositivos */
+/* =============================== */
+
+@keyframes pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0.7), var(--sombra-profunda);
+    }
+    70% {
+        box-shadow: 0 0 0 1.25rem rgba(255, 199, 44, 0), var(--sombra-profunda); /* 20px */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0), var(--sombra-profunda);
+    }
+}
 
 @media (max-width: 1260px) { 
     
@@ -1208,6 +1212,47 @@ ul.menu-footer i, ul.contact-footer i  {
         max-width: 90%;
     }
 }
+
+
+@media (max-width: 991.98px) {
+
+    /* Clase de items del menu (etiqueta a) en tablets y móviles */
+    .navbar-nav .nav-link {
+        color: var(--color-texto2);
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 10px 20px;
+        margin: 4px 0;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        display: block;
+        text-align: center;
+        font-weight: 500;
+    }
+    /* Clase de efecto de item del menu (etiqueta a) en tablets y móviles */
+    .navbar-nav .nav-link:hover{        
+        background-color: var(--color-texto2);
+        color: var(--color-azul);
+    }
+    /* Clase estilo item del menu (etiqueta a) Menu Activo en tablets y móviles */
+    .navbar-nav .nav-link.active {
+        color: var(--color-azul);
+        background-color: var(--color-texto2);
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    /* Desactivación de Linea de efecto subrayado en items del menu (etiqueta a) */
+    .navbar-nav .nav-link:after {
+        content: none !important;
+    }
+    /* Espaciado de contenedor de div subnav */
+    .navbar-collapse {
+        margin: 20px 0;
+    }
+}
+
+
+
+
 
 @media (max-width: 768px) { 
     
@@ -1228,9 +1273,6 @@ ul.menu-footer i, ul.contact-footer i  {
         margin-bottom: 1.25rem; /* 20px */
     }
 
-
-
-
     .item-pregunta {
         max-width: 90%;
     }
@@ -1239,7 +1281,6 @@ ul.menu-footer i, ul.contact-footer i  {
     .contenedor-mapa-pequeno, .contenedor-mapa-grande {
         height: 18.75rem; /* 300px */
     }
-
 
 }
 
@@ -1280,32 +1321,4 @@ ul.menu-footer i, ul.contact-footer i  {
     }
 
 
-}
-/* HTML Contáctanos */
-
-
-
-
-    /* Botón flotante */
-.boton-flotante {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    background: var(--solar);
-    color: var(--oscuro);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    box-shadow: var(--sombra);
-}
-
-
-
-#graficoTorta {
-  width: 400px !important;
-  height: 400px !important;
 }
