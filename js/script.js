@@ -1,139 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-    
-    // // Inicio Código Calculadora
-    
-    // const botonCalcular = document.getElementById('botonCalcular');
-    
-    // if (botonCalcular) {
-        
-    //     botonCalcular.addEventListener('click', function() {
-
-    //         const tipoEnergiaActual = document.getElementById('tipoEnergiaActual');
-    //         const consumoMensualInput = document.getElementById('consumoMensual');
-    //         const zonaGeografica = document.getElementById('zonaGeografica');
-    //         const tipoEnergiaRenovable = document.getElementById('tipoEnergiaRenovable');
-    //         const resultadoCalculadora = document.getElementById('resultadoCalculadora');
-
-    //         if (!tipoEnergiaActual || !consumoMensualInput || !zonaGeografica || !tipoEnergiaRenovable || !resultadoCalculadora) {
-    //             console.error("Uno o más elementos de la calculadora no encontrados.");
-    //             if(resultadoCalculadora) resultadoCalculadora.innerHTML = '<p class="error">Error interno de la calculadora. Intente más tarde.</p>';
-    //             return;
-    //         }
-
-    //         const tipoConsumoActual = tipoEnergiaActual.value;
-    //         const consumoMensual = parseFloat(consumoMensualInput.value);
-    //         const zona = zonaGeografica.value;
-    //         const energiaRenovableSeleccionada = tipoEnergiaRenovable.value;
-            
-
-
-
-    //         if (isNaN(consumoMensual) || consumoMensual <= 0) {
-    //             resultadoCalculadora.innerHTML = '<p  class="alerta-error" role="alert">Por favor, ingrese un consumo mensual válido y mayor a cero.</p>';
-    //             consumoMensualInput.focus();
-    //             return;
-    //         }
-    //         if (
-    //             !tipoConsumoActual ||
-    //             !zona ||
-    //             !energiaRenovableSeleccionada
-    //         ) {
-    //             resultadoCalculadora.innerHTML = `
-    //                 <p class="alerta-error" role="alert">
-    //                     Por favor, complete todos los campos antes de calcular.
-    //                 </p>`;
-    //             return;
-    //         }
-
-    //         let consumoAnualKWH = 0;
-    //         let advertenciaInicial = '';
-    //         if (tipoConsumoActual === 'electricidad') {
-    //             consumoAnualKWH = consumoMensual * 12;
-    //         } else if (tipoConsumoActual === 'gas') {
-    //             consumoAnualKWH = consumoMensual * 12 * 10; // Estimación: 1 m³ gas ~ 10 kWh
-    //             advertenciaInicial = `<p class="texto-pequeno texto-advertencia">La estimación para Gas Natural es aproximada (1 m³ ≈ 10 kWh térmicos).</p>`;
-    //         }
-
-    //         let htmlResultados = '<h3>Resultados de la Estimación:</h3>' + advertenciaInicial;
-    //         let advertenciaAdicional = '';
-    //         let tasaUSDACOP = 4050; // Ejemplo, actualizar según sea necesario
-            
-
-    //         switch (energiaRenovableSeleccionada) {
-    //             case 'solar':
-    //                 const potenciaPanelWatts = 450;
-    //                 let horasPicoSol = 4.5; // Promedio Colombia
-    //                 if (zona === 'caribe') horasPicoSol = 5.5;
-    //                 else if (zona === 'pacifica') horasPicoSol = 3.8;
-    //                 else if (zona === 'orinoquia') horasPicoSol = 5.0;
-    //                 else if (zona === 'amazonia') horasPicoSol = 4.0;
-
-    //                 const energiaNecesariaWhSolarDiaria = (consumoAnualKWH * 1000) / 365;
-    //                 const energiaPorPanelPorDiaWh = potenciaPanelWatts * horasPicoSol;
-    //                 const numeroPaneles = Math.ceil(energiaNecesariaWhSolarDiaria / energiaPorPanelPorDiaWh);
-    //                 const potenciaTotalSistemaSolarWatts = numeroPaneles * potenciaPanelWatts;
-    //                 const costoPorWattSolarUSD = 1.0; // Estimado
-    //                 const costoEstimadoSolarUSD = potenciaTotalSistemaSolarWatts * costoPorWattSolarUSD;
-    //                 const costoEstimadoSolarCOP = costoEstimadoSolarUSD * tasaUSDACOP;
-    //                 const ahorroAnualPorKWHSolarUSD = 0.18; // Estimado
-    //                 const ahorroAnualEstimadoSolarUSD = consumoAnualKWH * ahorroAnualPorKWHSolarUSD;
-    //                 const ahorroAnualEstimadoSolarCOP = ahorroAnualEstimadoSolarUSD * tasaUSDACOP;
-
-    //                 htmlResultados += `
-    //                     <h3>Energía Solar:</h3>
-    //                     <p>Paneles solares recomendados: <strong>${numeroPaneles} paneles</strong> (de ${potenciaPanelWatts}W c/u)</p>
-    //                     <p>Potencia total estimada del sistema: <strong>${(potenciaTotalSistemaSolarWatts / 1000).toFixed(2)} kWp</strong></p>
-    //                     <p>Costo estimado del sistema: <strong>$${costoEstimadoSolarUSD.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} USD</strong> (aprox. <strong>${costoEstimadoSolarCOP.toLocaleString('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0, maximumFractionDigits: 0 })}</strong>)</p>
-    //                     <p>Ahorro anual estimado: <strong>$${ahorroAnualEstimadoSolarUSD.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} USD</strong> (aprox. <strong>${ahorroAnualEstimadoSolarCOP.toLocaleString('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0, maximumFractionDigits: 0 })}</strong>)</p>
-    //                 `;
-    //                 advertenciaAdicional = `<p class="texto-pequeno">Esta es una estimación general. Los costos y ahorros reales pueden variar. Recomendamos una asesoría personalizada.</p>`;
-    //                 break;
-
-    //             case 'eolica':
-    //                  // Cálculos simplificados para eólica
-    //                 const potenciaGeneradorEolicoWatts = 3000; // Ejemplo: 3 kW para residencial
-    //                 const factorCapacidadEolica = 0.25; // 25% (muy dependiente del sitio)
-    //                 const energiaAnualGeneradorWh = potenciaGeneradorEolicoWatts * 8760 * factorCapacidadEolica;
-    //                 const numeroGeneradoresEolicos = Math.ceil((consumoAnualKWH * 1000) / energiaAnualGeneradorWh);
-    //                 const costoPorKWEolicoUSD = 4500; // Estimado
-    //                 const costoEstimadoEolicoUSD = (numeroGeneradoresEolicos * potenciaGeneradorEolicoWatts / 1000) * costoPorKWEolicoUSD;
-    //                 const costoEstimadoEolicoCOP = costoEstimadoEolicoUSD * tasaUSDACOP;
-    //                 const ahorroAnualPorKWHEolicoUSD = 0.18;
-    //                 const ahorroAnualEstimadoEolicoUSD = consumoAnualKWH * ahorroAnualPorKWHEolicoUSD;
-    //                 const ahorroAnualEstimadoEolicoCOP = ahorroAnualEstimadoEolicoUSD * tasaUSDACOP;
-
-    //                 htmlResultados += `
-    //                     <h3>Energía Eólica:</h3>
-    //                     <p>Aerogeneradores recomendados: <strong>${numeroGeneradoresEolicos}</strong> (de ${potenciaGeneradorEolicoWatts/1000} kW c/u)</p>
-    //                     <p>Costo estimado del sistema: <strong>$${costoEstimadoEolicoUSD.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} USD</strong> (aprox. <strong>${costoEstimadoEolicoCOP.toLocaleString('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0, maximumFractionDigits: 0 })}</strong>)</p>
-    //                     <p>Ahorro anual estimado: <strong>$${ahorroAnualEstimadoEolicoUSD.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} USD</strong> (aprox. <strong>${ahorroAnualEstimadoEolicoCOP.toLocaleString('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0, maximumFractionDigits: 0 })}</strong>)</p>
-    //                 `;
-    //                 advertenciaAdicional = `<p class="texto-pequeno">La viabilidad eólica depende críticamente del viento en su ubicación. Se requiere un estudio de sitio detallado.</p>`;
-    //                 break;
-
-    //             case 'hidrogeno-verde':
-    //                 htmlResultados += `
-    //                     <h3>Hidrógeno Verde:</h3>
-    //                     <p>Los sistemas de hidrógeno verde para uso residencial son aún experimentales y de alto costo. Actualmente, no ofrecemos una estimación simplificada para esta tecnología a nivel doméstico.</p>
-    //                 `;
-    //                 advertenciaAdicional = `<p class="texto-pequeno">El hidrógeno verde tiene un gran potencial futuro, especialmente para industria y almacenamiento a gran escala.</p>`;
-    //                 break;
-
-    //             default:
-    //                 htmlResultados += '<p class="error" role="alert">Tipo de energía renovable no reconocido.</p>';
-    //                 break;
-    //         }
-    //         resultadoCalculadora.innerHTML = htmlResultados + advertenciaAdicional;
-    //         resultadoCalculadora.classList.remove('error', 'resultado-listo');
-    //         resultadoCalculadora.classList.add('resultado-listo');
-
-
-    //     });
-    // }
-
-    // // Fin Código Calculadora
-
 
     // Inicio Código Mapa
     function inicializarMapa(idMapa, coordenadas, zoom, textoPopup = 'Ubicación') {
@@ -243,18 +108,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+        // Fin Código Mapa
 
-    // Boton Flotante
-    if (window.location.pathname.includes('index.html') && window.location.hash === '#seccion-calculadora') {
-        setTimeout(() => {
-            const seccionCalculadora = document.getElementById('seccion-calculadora');
-            if (seccionCalculadora) {
+        if (window.location.hash === '#seccion-calculadora') {
+        const seccionCalculadora = document.getElementById('seccion-calculadora');
+        if (seccionCalculadora) {
+            setTimeout(() => {
                 seccionCalculadora.scrollIntoView({ behavior: 'smooth' });
-            }
-        }, 100);
+            }, 50); // tiempo ajustado por carga de animaciones
+        }
     }
-
-    // Fin Código Mapa
 
 
 

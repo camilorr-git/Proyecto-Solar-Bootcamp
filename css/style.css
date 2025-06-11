@@ -818,11 +818,89 @@ ul.menu-footer i, ul.contact-footer i  {
 /* Inicia Estilo Energía Solar */
 /* -------------------------------- */
 
+.tipos-energia {
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.tipos-energia:hover {
+    transform: translateY(-5px);
+}
+
+.tipos-energia h2{
+    color: var(--primario);
+    margin-bottom: 1rem;
+    font-size: 2.5rem; 
+}
+
+.tipos-energia h3, h4, h5 {
+    font-size: 1.7rem;
+    line-height: 2.5rem;;
+    color: var(--color-verde);
+    padding: 10px 0 10px;
+    font-weight: bold;
+}
+
+.tipos-energia p {
+    font-size: 1.4rem;
+    color: var(--gris-texto);
+    padding: 10px;
+    text-align: center;
+}
+
+
+.tipos-energia img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta {
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.cuerpo-tarjeta {
+    padding: 1rem;
+}
+
+.main-content-graficos {
+	padding: 20px;
+}
+
+.grafico{
+    padding: 1rem 0;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	line-height: 100%;
+}
+
+
+canvas{
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+    max-height: 350px;
+}
+
 
 
 
 /* -------------------------------- */
-/* tERMINA Estilo Energía Solar */
+/* Termina Estilo Energía Solar */
 /* -------------------------------- */
 
 
@@ -1120,13 +1198,12 @@ ul.menu-footer i, ul.contact-footer i  {
 /* Estilos para la página de Contacto */
 
 
-
 .pagina-contacto .info-contacto,
-.pagina-contacto .formulario-contacto {
+.pagina-contacto .formulario-contacto{
     background-color: var(--blanco);
-    padding: 2.5rem; /* 40px */
     border-radius: var(--radio-borde-medio);
     box-shadow: var(--sombra-media);
+    height: 100%; 
 }
 
 .pagina-contacto .info-contacto h2,
@@ -1135,6 +1212,7 @@ ul.menu-footer i, ul.contact-footer i  {
     margin-bottom: 1.875rem; /* 30px */
     color: var(--oscuro);
     text-align: center;
+    font-weight: bold;
 }
 
 .pagina-contacto .info-contacto p {
@@ -1262,13 +1340,11 @@ ul.menu-footer i, ul.contact-footer i  {
     .seccion-hero p {
         font-size: 1.2rem; /* ~19px */
     }
-    .pagina-contacto .grid-contacto { /* Forzar una columna en móviles */
-        grid-template-columns: 1fr;
-    }
-    .tarjeta-calculadora, .pagina-contacto .info-contacto, .pagina-contacto .formulario-contacto, .tarjeta-testimonio, .tarjeta-articulo {
+    
+    .tarjeta-calculadora, .tarjeta-testimonio, .tarjeta-articulo {
         padding: 1.25rem; /* 20px */
     }
-    .tarjeta-calculadora h3, .pagina-contacto .info-contacto h2, .pagina-contacto .formulario-contacto h2 {
+    .tarjeta-calculadora h3{
         font-size: 1.5rem; /* 24px */
         margin-bottom: 1.25rem; /* 20px */
     }
@@ -1292,28 +1368,7 @@ ul.menu-footer i, ul.contact-footer i  {
     .seccion-hero p {
         font-size: 1rem;
     }
-    .pagina-contacto .info-contacto, .pagina-contacto .formulario-contacto {
-        padding: 1rem; /* 16px */
-    }
-    .pagina-contacto .info-contacto h2, .pagina-contacto .formulario-contacto h2 {
-        font-size: 1.3rem; /* ~21px */
-        margin-bottom: 1.25rem; /* 20px */
-    }
-    .pagina-contacto .info-contacto p {
-        font-size: 0.95rem; /* ~15px */
-    }
-    .pagina-contacto .info-contacto p i {
-        font-size: 1.2rem; /* ~19px */
-        margin-right: 0.625rem; /* 10px */
-    }
-    .pagina-contacto .iconos-sociales-contacto {
-        gap: 1rem; /* 16px */
-        margin-top: 1.25rem; /* 20px */
-    }
-    .pagina-contacto .iconos-sociales-contacto a {
-        font-size: 1.5rem; /* 24px */
-    }
-
+   
     
 
     .item-pregunta {

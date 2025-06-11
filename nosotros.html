@@ -113,7 +113,7 @@
 
         <section class="py-5 fondo-claro">
             <div class="container">
-                <h2 class="text-center titulo-seccion  fw-bold mb-4  pb-5">Nuestros Valores</h2>
+                <h2 class="text-center titulo-seccion fw-bold mb-4  pb-5">Nuestros Valores</h2>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                         <article class="item-caracteristica h-100 py-5">
@@ -266,11 +266,11 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>    
 
-    <a href="index.html#seccion-calculadora" class="boton-flotante" aria-label="Calcular Ahorro Energético">
+    <a href="index.html" class="boton-flotante" id="botonCalculadora" data-seccion="seccion-calculadora" aria-label="Ir a la calculadora">
         <i class="fas fa-calculator" aria-hidden="true"></i>
-    </a>    
+    </a>
 
     <!-- Js bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
@@ -290,5 +290,17 @@
     <script src="js/graficas.js"></script>
     <!-- chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        const botonCalculadora = document.getElementById('botonCalculadora');
+        if (botonCalculadora) {
+            botonCalculadora.addEventListener('click', function () {
+                const seccion = this.dataset.seccion;
+                if (seccion) {
+                    localStorage.setItem('scrollDestino', seccion);
+                }
+            });
+        }
+    </script>
 </body>
 </html>
