@@ -110,16 +110,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Fin Código Mapa
 
+
+        // Enlace de botón flotante de calculadora para sub páginas
+
         if (window.location.hash === '#seccion-calculadora') {
         const seccionCalculadora = document.getElementById('seccion-calculadora');
         if (seccionCalculadora) {
             setTimeout(() => {
                 seccionCalculadora.scrollIntoView({ behavior: 'smooth' });
-            }, 50); // tiempo ajustado por carga de animaciones
+            }, 400);
         }
     }
 
-
+    // tooltip informativo de gráficas
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl);
+    });
 
 
 });

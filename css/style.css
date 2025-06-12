@@ -805,6 +805,17 @@ ul.menu-footer i, ul.contact-footer i  {
 }
 
 
+@keyframes pulso {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0.7), var(--sombra-profunda);
+    }
+    70% {
+        box-shadow: 0 0 0 1.25rem rgba(255, 199, 44, 0), var(--sombra-profunda); /* 20px */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0), var(--sombra-profunda);
+    }
+}
 
 
 /* -------------------------------- */
@@ -894,6 +905,25 @@ canvas{
     display: block;
     margin: 0 auto;
     max-height: 350px;
+}
+
+.fuente-grafico a{
+    text-decoration: none;
+    color: var(--color-texto3);
+}
+.fuente-grafico a:hover{
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+.icono-titilante {
+    animation: titilar 1.5s infinite;
+}
+
+.icono-titilante:hover {
+    animation: none;
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 
@@ -1272,27 +1302,122 @@ canvas{
 /* Medidas Responsive Dispositivos */
 /* =============================== */
 
-@keyframes pulso {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0.7), var(--sombra-profunda);
-    }
-    70% {
-        box-shadow: 0 0 0 1.25rem rgba(255, 199, 44, 0), var(--sombra-profunda); /* 20px */
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 199, 44, 0), var(--sombra-profunda);
-    }
+
+
+@keyframes titilar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
 }
 
-@media (max-width: 1260px) { 
+
+
+
+@media screen and (min-device-width: 961px) and (max-device-width: 1260px) { 
     
     .item-pregunta {
         max-width: 90%;
     }
+    .seccion-historicos h2{
+        margin-bottom: 30px;
+    }
+
+    .seccion-historicos, .seccion-calculadora {
+        padding: 40px 0;
+    }
+    .tarjeta-caracteristica{
+        
+        padding: 20px !important;
+
+    }
+    .seccion-historicos .tarjeta-historicos h3, .tarjeta-caracteristica h3 {
+        font-size: 2rem;
+        margin: 15px 0;
+    }
+
+    .seccion-historicos .tarjeta-historicos p, .tarjeta-caracteristica p{
+        font-size: 1.6rem;
+    }
+
+
+        /* Pagina Aprende e Involucrate */
+
+    .grid-submenu{
+        padding: 0 15px;
+    }
+    .seccion-quienes-somos{
+        padding: 10px 15px 25px;
+    }
+
+    /* Pagina Aprende e Involucrate */
+
 }
 
 
-@media (max-width: 991.98px) {
+
+@media screen and (min-device-width: 769px) and (max-device-width: 960px) {
+
+
+/* Pagina de Inicio */
+
+
+    .contenido-diapositiva h2 {
+        font-size: 2.5rem;
+    }
+    .contenido-diapositiva p {
+        padding: 15px;
+        font-size: 1.65rem; 
+    }
+
+
+    .botones-pagina-1 .boton, .botones-pagina-2 .boton-2{
+        font-size: 1.3rem;
+    }
+
+    .diapositiva .contenido-diapositiva{
+        padding: 30px;
+        width: 80%;
+    }
+
+    .contenido-bienvenida p {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+    }
+
+    
+    .seccion-historicos h2{
+        margin-bottom: 30px;
+    }
+
+    
+/* Pagina de Inicio */
+
+
+    /* Pagina Aprende e Involucrate */
+
+    .grid-submenu{
+        padding: 0 15px;
+    }
+
+    .grid-submenu a{
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+
+    /* Pagina Aprende e Involucrate */
+
+
+
+/* Pagina Nosotros */
+
+    .seccion-quienes-somos{
+        padding: 10px 0 40px;
+    }
+    .seccion-quienes-somos p{
+        font-size: 1.45rem !important;
+    }
+
+
+/* Pagina Nosotros */
 
     /* Clase de items del menu (etiqueta a) en tablets y móviles */
     .navbar-nav .nav-link {
@@ -1305,6 +1430,7 @@ canvas{
         display: block;
         text-align: center;
         font-weight: 500;
+        
     }
     /* Clase de efecto de item del menu (etiqueta a) en tablets y móviles */
     .navbar-nav .nav-link:hover{        
@@ -1326,20 +1452,151 @@ canvas{
     .navbar-collapse {
         margin: 20px 0;
     }
+
+
+
+
 }
 
 
 
 
 
-@media (max-width: 768px) { 
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
     
-    .seccion-hero h1 {
-        font-size: 2.5rem; /* 40px */
+
+/* Pagina de Inicio */
+    .botones-pagina-1 .boton, .botones-pagina-2 .boton-2{
+        font-size: 1.3rem;
     }
-    .seccion-hero p {
-        font-size: 1.2rem; /* ~19px */
+
+    .diapositiva .contenido-diapositiva{
+        padding: 30px;
+        width: 80%;
     }
+
+    .contenido-diapositiva h2{
+        font-size: 1.8rem;
+    }
+
+    .contenido-diapositiva p {
+        font-size: 2.5rem;
+    }
+
+    .contenido-bienvenida p {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+    }
+
+    .call-to-action h2, .call-to-action p{
+        text-align: center;
+    }
+
+    .seccion-historicos h2{
+        margin-bottom: 30px;
+    }
+
+    .seccion-historicos, .seccion-calculadora {
+        padding: 40px 0;
+    }
+    .tarjeta-caracteristica{
+        
+        padding: 20px !important;
+
+    }
+    .seccion-historicos .tarjeta-historicos h3, .tarjeta-caracteristica h3 {
+        font-size: 1.8rem;
+        margin: 15px 0;
+    }
+
+    .seccion-historicos .tarjeta-historicos p, .tarjeta-caracteristica p{
+        font-size: 1.5rem;
+    }
+    .tarjeta-calculadora{
+        padding: 20px !important;
+    }
+    .seccion-logos {
+        padding: 20px !important;
+    }
+
+/* Pagina de Inicio */
+
+.seccion-energia{
+    padding: 0px 15px;
+}
+
+
+
+/* Pagina Energia Solar */
+
+.item-historicos h4{
+    padding: 0;
+}
+.item-historicos p{
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    padding: 5px 0;
+}
+
+.fuente-grafico{
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+/* Pagina Energia Solar */
+    
+
+/* Pagina Aprende e Involucrate */
+
+.grid-submenu, .galeria-grid, .infografias-grid, #comunidad, #programas-gobierno{
+    padding: 0 15px;
+}
+
+.grid-submenu a{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+/* Pagina Aprende e Involucrate */
+
+/* Pagina Nosotros */
+
+.seccion-quienes-somos, .pagina-aprende, .seccion-valores, .seccion-valores, .seccion-equipo {
+    padding: 0 15px;
+}
+
+.seccion-quienes-somos{
+    padding: 10px 15px 25px;
+}
+
+.seccion-quienes-somos p{
+    font-size: 1.6rem !important;
+}
+.seccion-quienes-somos img{
+    margin-bottom: 20px
+}
+
+.equipo-card img {
+    height: 450px;
+    padding: 20px;
+    object-fit: cover;
+}
+
+/* Pagina Nosotros */
+
+
+
+
+/* Seccion Footer */
+    .iconos-sociales{
+        text-align: center !important;
+
+    }
+
+    /* Seccion Footer */
+
+
     
     .tarjeta-calculadora, .tarjeta-testimonio, .tarjeta-articulo {
         padding: 1.25rem; /* 20px */
@@ -1360,20 +1617,128 @@ canvas{
 
 }
 
-@media (max-width: 480px) {
-    
-    .seccion-hero h1 {
-        font-size: 1.8rem; /* ~29px */
+@media only screen and (max-device-width: 480px) {
+
+/* Pagina de Inicio */
+    .botones-pagina-1 .boton, .botones-pagina-2 .boton-2{
+        font-size: 1.3rem;
     }
-    .seccion-hero p {
-        font-size: 1rem;
+
+    .diapositiva .contenido-diapositiva{
+        padding: 30px;
+        width: 80%;
     }
-   
+
+    .contenido-diapositiva h2{
+        font-size: 1.8rem;
+    }
+
+    .contenido-diapositiva p {
+        font-size: 2.5rem;
+    }
+
+    .contenido-bienvenida p {
+        padding: 10px 20px;
+        font-size: 1.5rem;
+    }
+
+    .call-to-action h2, .call-to-action p{
+        text-align: center;
+    }
+    .seccion-historicos, .seccion-calculadora {
+        padding: 40px 0;
+    }
+    .seccion-historicos .tarjeta-historicos, .tarjeta-caracteristica{
+        margin: 0 15px;
+    }
+    .seccion-historicos .tarjeta-historicos h3, .tarjeta-caracteristica h3 {
+        font-size: 1.8rem;
+        margin: 15px 0;
+    }
+
+    .seccion-historicos .tarjeta-historicos p, .tarjeta-caracteristica p{
+        font-size: 1.5rem;
+    }
+    .tarjeta-calculadora{
+        padding: 20px !important;
+    }
+    .seccion-logos {
+        padding: 20px !important;
+    }
+
+/* Pagina de Inicio */
+
+.seccion-energia{
+    padding: 0px 15px;
+}
+
+
+
+/* Pagina Energia Solar */
+
+.item-historicos h4{
+    padding: 0;
+}
+.item-historicos p{
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    padding: 5px 0;
+}
+
+.fuente-grafico{
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+/* Pagina Energia Solar */
     
 
-    .item-pregunta {
-        max-width: 90%;
+/* Pagina Aprende e Involucrate */
+
+.grid-submenu, .galeria-grid, .infografias-grid, #comunidad, #programas-gobierno{
+    padding: 0 15px;
+}
+
+.grid-submenu a{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+/* Pagina Aprende e Involucrate */
+
+/* Pagina Nosotros */
+
+.seccion-quienes-somos, .pagina-aprende, .seccion-valores, .seccion-valores, .seccion-equipo {
+    padding: 0 15px;
+}
+
+.seccion-quienes-somos{
+    padding: 10px 15px 25px;
+}
+
+.seccion-quienes-somos img{
+    margin-bottom: 20px
+}
+
+.equipo-card img {
+    height: 450px;
+    padding: 20px;
+    object-fit: cover;
+}
+
+/* Pagina Nosotros */
+
+
+
+
+/* Seccion Footer */
+    .iconos-sociales{
+        text-align: center !important;
+
     }
+
+    /* Seccion Footer */
 
 
 }

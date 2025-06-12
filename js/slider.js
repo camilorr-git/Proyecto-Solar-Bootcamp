@@ -47,7 +47,7 @@ setInterval(() => {
             for (let i = 0; i < diapositivas.length; i++) {
                 diapositivas[i].style.opacity = "0";
                 diapositivas[i].style.zIndex = "0";
-                if (diapositivas[i].querySelector('h1')) diapositivas[i].querySelector('h1').classList.remove('animate__fadeInUp');
+                if (diapositivas[i].querySelector('h2')) diapositivas[i].querySelector('h2').classList.remove('animate__fadeInUp');
                 if (diapositivas[i].querySelector('p')) diapositivas[i].querySelector('p').classList.remove('animate__fadeInUp');
                 if (diapositivas[i].querySelector('.boton')) diapositivas[i].querySelector('.boton').classList.remove('animate__fadeInUp');
 
@@ -60,7 +60,7 @@ setInterval(() => {
             diapositivas[indiceDiapositiva - 1].style.opacity = "1";
             diapositivas[indiceDiapositiva - 1].style.zIndex = "1";
              // Re-activar animación para la diapositiva actual
-            if (diapositivas[indiceDiapositiva - 1].querySelector('h1')) diapositivas[indiceDiapositiva - 1].querySelector('h1').classList.add('animate__fadeInUp');
+            if (diapositivas[indiceDiapositiva - 1].querySelector('h2')) diapositivas[indiceDiapositiva - 1].querySelector('h2').classList.add('animate__fadeInUp');
             if (diapositivas[indiceDiapositiva - 1].querySelector('p')) diapositivas[indiceDiapositiva - 1].querySelector('p').classList.add('animate__fadeInUp');
             if (diapositivas[indiceDiapositiva - 1].querySelector('.boton')) diapositivas[indiceDiapositiva - 1].querySelector('.boton').classList.add('animate__fadeInUp');
 

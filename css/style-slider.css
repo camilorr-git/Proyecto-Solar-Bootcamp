@@ -303,39 +303,12 @@ body{
 
 
 
-/* Estilos responsivos */
-@media (max-width: 992px) { /* Tablets y móviles grandes */
-    .carrusel-hero {
-        height: 500px;
-    }
-    .contenido-diapositiva h1 {
-        font-size: 2.8rem; /* ~45px */
-    }
-    .contenido-diapositiva p {
-        font-size: 1.2rem; /* ~19px */
-    }
-}
+
 
 
 
 @media (max-width: 768px) {
 
-    .carrusel-hero {
-        height: 400px;
-    }
-    .contenido-diapositiva {
-        padding: 1rem; /* 16px */
-    }
-    .contenido-diapositiva h1 {
-        font-size: 2rem; /* 32px */
-    }
-    .contenido-diapositiva p {
-        font-size: 1rem;
-    }
-    .botones-diapositiva .boton {
-        padding: 0.625rem 1.25rem; /* 10px 20px */
-        font-size: 0.9rem; /* ~14.4px */
-    }
     .anterior, .siguiente {
         font-size: 1.5rem; /* 24px */
         padding: 0.75rem; /* 12px */

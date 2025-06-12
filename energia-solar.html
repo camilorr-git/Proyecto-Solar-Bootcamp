@@ -81,7 +81,7 @@
 
     <main class="pt-5">
 
-        <section class="py-5">
+        <section class="py-5 seccion-energia">
             <div class="container">
                 <h2 class="mb-5 fs-1 fw-bold text-center">Conoce la Energía Solar</h2>
                 <div class="mb-5">
@@ -197,7 +197,7 @@
                                         <li>Costo inicial de instalación.</li>
                                         <li>Intermitencia de la luz solar; rendimiento afectado por el clima.</li>
                                         <li>Necesidad de espacio para los paneles.</li>
-                                        <li>Almacenamiento de energía (baterías) puede ser costoso.</li>
+                                        <li>El almacenamiento de energía (baterías) puede ser costoso.</li>
                                         <li>Requiere limpieza ocasional (hay paneles solares automatizados que pueden limpiarse a sí mismos pero el coste es mayor).</li>
                                         <li>La eficiencia está entre un rango aproximado de 15-22%.</li>
                                     </ul>
@@ -256,48 +256,67 @@
                 <div class="row g-5 pt-5">
 
                     <!-- Gráfico de Barras -->
-                    <div class="col-md-12 p-3 mb-5 bg-white rounded shadow-sm">
-                        <div class="p-4">
-                            <h4 class="mb-3 text-black">1. Producción de Energía Renovable por Fuente</h4>
+                    <div class="col-md-12 p-3 mb-5 bg-white rounded shadow-sm item-historicos">
+                        <div class="p-4  h-100">
+                            <h4 class="mb-3 text-black">1. Producción de Energía Renovable por Fuente</h4>                            
+                            <p>Gráfico de evolución en producción de energía renovable en Colombia y comparación de cómo han cambiado y crecido estas tecnologías en el tiempo. Fuentes de energías  comparadas: Energía Eólica, Solar, Hidroeléctrica y Bioenergía. Cada barra representa la cantidad generada por año en teravatios-hora (TWh).</p>
                             <div class="grafico">
                                 <canvas id="graficoBarras" height="500"></canvas>
                             </div>
+                            <small class="fuente-grafico" ><b>Fuente: </b><a href="https://www.kaggle.com/datasets/belayethossainds/renewable-energy-world-wide-19652022">Renewable Energy World Wide : 1965~2022</a> </small>
                         </div>
                     </div>
 
                     <!-- Gráfico de Torta -->
-                    <div class="col-md-12 p-3 mb-5 bg-white rounded shadow-sm">
+                    <div class="col-md-12 p-3 mb-5 bg-white rounded shadow-sm item-historicos">
                         <div class="p-4 h-100">
                             <h4 class="mb-3 text-black">2. Participación de Energías Renovables (último año)</h4>
+                            <p>Gráfico de representación porcentual de la energía renovable del último año (2021). El gráfico de torta permite visualizar las energías (solar, eólica, hidroeléctrica y otras renovables).</p>
                             <div class="grafico d-flex justify-content-center">
                                 <canvas id="graficoTorta" width="300" height="500" style="max-height: 300px;"></canvas>
                             </div>
+                            <small class="fuente-grafico" ><b>Fuente: </b><a href="https://www.kaggle.com/datasets/belayethossainds/renewable-energy-world-wide-19652022">Renewable Energy World Wide : 1965~2022</a> </small>
                         </div>
                     </div>
 
                     <!-- Gráfico de Líneas -->
-                    <div class="col-md-12 p-3 mb-5 bg-white rounded shadow-sm">
+                    <div class="col-md-12 p-3 mb-5 bg-white rounded shadow-sm item-historicos">
                         <div class="p-4 h-100">
                             <h4 class="mb-3 text-black">3. Tendencia en la Capacidad Instalada</h4>
+                            <p>Gráfico del crecimiento acumulado de la capacidad instalada para generar electricidad a partir de fuentes renovables, como la eólica, solar y otras tecnologías (geotérmica o biomasa). Se representa como una línea por año, donde se puede observar el incremento de uso de la energía renovable del país.</p>
                             <div class="grafico">
                                 <canvas id="graficoLineas" height="500"></canvas>
                             </div>
+                            <small class="fuente-grafico" ><b>Fuente: </b><a href="https://www.kaggle.com/datasets/belayethossainds/renewable-energy-world-wide-19652022">Renewable Energy World Wide : 1965~2022</a> </small>
                         </div>
                     </div>
 
                     <!-- Gráfico de Área -->
-                    <div class="col-md-12 p-3 mb-5 bg-white rounded shadow-sm">
+                    <div class="col-md-12 p-3 mb-5 bg-white rounded shadow-sm item-historicos">
                         <div class="p-4">
                             <h4 class="mb-3 text-black">4. Consumo de Energía: Renovable vs Convencional</h4>
+                            <p>Gráfico de comparación del consumo de energía renovable frente a la energía convencional (principalmente de origen fósil) en Colombia desde 1965 hasta 2023. Esta comparativa permite visualizar la evolución del consumo y el avance hacia una transición energética más limpia.</p>
                             <div class="grafico">
                                 <canvas id="graficoArea" height="500"></canvas>
                             </div>
+                            <small class="fuente-grafico" ><b>Fuente: </b><a href="https://countryeconomy.com/energy-and-environment/electricity-generation/colombia">Colombia - Electricity generation</a> </small><br>
+                            <small class="fuente-grafico" ><b>Fuente: </b><a href="https://www.kaggle.com/datasets/belayethossainds/renewable-energy-world-wide-19652022">Renewable Energy World Wide : 1965~2022</a> </small>
                         </div>
                     </div>
 
                 </div>
         </div>
         </section>
+
+    <section class="seccion-llamado-accion relleno-seccion texto-centrado p-5 my-5">
+        <div class="contenedor">
+            <h2>¿Tienes más preguntas?</h2>
+            <p>Contáctanos y nuestro equipo de expertos te ayudará a resolverlas.</p>
+            <div class="botones-pagina-1">
+                <a href="contactenos.html" class="boton">Pregunta a un Experto</a>
+            </div>
+        </div>
+    </section>
     
     </main>
 
