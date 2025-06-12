@@ -1131,6 +1131,7 @@ canvas{
     .seccion-llamado-accion {
         background-color: var(--gris-azulado-muy-claro);
         text-align: center;
+       
     }
 
     .seccion-llamado-accion h2 {
