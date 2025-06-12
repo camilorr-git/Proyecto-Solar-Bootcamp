@@ -1,0 +1,458 @@
+[
+  {
+    "Code": "COL",
+    "year": 1965,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 3.5439494
+  },
+  {
+    "Code": "COL",
+    "year": 1966,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 3.9372194
+  },
+  {
+    "Code": "COL",
+    "year": 1967,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 4.3892536
+  },
+  {
+    "Code": "COL",
+    "year": 1968,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 4.8910117
+  },
+  {
+    "Code": "COL",
+    "year": 1969,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 5.4379735
+  },
+  {
+    "Code": "COL",
+    "year": 1970,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 6.05274
+  },
+  {
+    "Code": "COL",
+    "year": 1971,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 6.4234085
+  },
+  {
+    "Code": "COL",
+    "year": 1972,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 7.115021
+  },
+  {
+    "Code": "COL",
+    "year": 1973,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 7.7433486
+  },
+  {
+    "Code": "COL",
+    "year": 1974,
+    "GeoBiomass": 0.0,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 8.7920685
+  },
+  {
+    "Code": "COL",
+    "year": 1975,
+    "GeoBiomass": 0.189,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 9.7323
+  },
+  {
+    "Code": "COL",
+    "year": 1976,
+    "GeoBiomass": 0.202,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 10.22642
+  },
+  {
+    "Code": "COL",
+    "year": 1977,
+    "GeoBiomass": 0.192,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 10.451812
+  },
+  {
+    "Code": "COL",
+    "year": 1978,
+    "GeoBiomass": 0.206,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 12.07144
+  },
+  {
+    "Code": "COL",
+    "year": 1979,
+    "GeoBiomass": 0.216,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 13.2593
+  },
+  {
+    "Code": "COL",
+    "year": 1980,
+    "GeoBiomass": 0.227,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 14.44702
+  },
+  {
+    "Code": "COL",
+    "year": 1981,
+    "GeoBiomass": 0.212,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 14.26534
+  },
+  {
+    "Code": "COL",
+    "year": 1982,
+    "GeoBiomass": 0.231,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 15.238536
+  },
+  {
+    "Code": "COL",
+    "year": 1983,
+    "GeoBiomass": 0.234,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 15.365776
+  },
+  {
+    "Code": "COL",
+    "year": 1984,
+    "GeoBiomass": 0.255,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 17.14022
+  },
+  {
+    "Code": "COL",
+    "year": 1985,
+    "GeoBiomass": 0.267,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 18.440771
+  },
+  {
+    "Code": "COL",
+    "year": 1986,
+    "GeoBiomass": 0.266,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 21.332952
+  },
+  {
+    "Code": "COL",
+    "year": 1987,
+    "GeoBiomass": 0.268,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 23.24756
+  },
+  {
+    "Code": "COL",
+    "year": 1988,
+    "GeoBiomass": 0.274,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 24.5194
+  },
+  {
+    "Code": "COL",
+    "year": 1989,
+    "GeoBiomass": 0.274,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 26.78212
+  },
+  {
+    "Code": "COL",
+    "year": 1990,
+    "GeoBiomass": 0.274,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 27.495852
+  },
+  {
+    "Code": "COL",
+    "year": 1991,
+    "GeoBiomass": 0.269,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 27.72608
+  },
+  {
+    "Code": "COL",
+    "year": 1992,
+    "GeoBiomass": 0.34,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 22.280584
+  },
+  {
+    "Code": "COL",
+    "year": 1993,
+    "GeoBiomass": 0.389,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 27.856392
+  },
+  {
+    "Code": "COL",
+    "year": 1994,
+    "GeoBiomass": 0.444,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 32.05839
+  },
+  {
+    "Code": "COL",
+    "year": 1995,
+    "GeoBiomass": 0.477,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 31.9894
+  },
+  {
+    "Code": "COL",
+    "year": 1996,
+    "GeoBiomass": 0.496,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 35.287624
+  },
+  {
+    "Code": "COL",
+    "year": 1997,
+    "GeoBiomass": 0.483,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 31.47576
+  },
+  {
+    "Code": "COL",
+    "year": 1998,
+    "GeoBiomass": 0.532,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 30.781685
+  },
+  {
+    "Code": "COL",
+    "year": 1999,
+    "GeoBiomass": 0.457,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 33.700657
+  },
+  {
+    "Code": "COL",
+    "year": 2000,
+    "GeoBiomass": 0.496,
+    "SolarGeneration": 0.001835014,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 30.815718
+  },
+  {
+    "Code": "COL",
+    "year": 2001,
+    "GeoBiomass": 0.496,
+    "SolarGeneration": 0.00266875,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 31.632658
+  },
+  {
+    "Code": "COL",
+    "year": 2002,
+    "GeoBiomass": 0.491,
+    "SolarGeneration": 0.00465125,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 33.968037
+  },
+  {
+    "Code": "COL",
+    "year": 2003,
+    "GeoBiomass": 0.495,
+    "SolarGeneration": 0.006405,
+    "WindGeneration": 0.0,
+    "HydroGeneration": 36.17636
+  },
+  {
+    "Code": "COL",
+    "year": 2004,
+    "GeoBiomass": 0.467,
+    "SolarGeneration": 0.007951726,
+    "WindGeneration": 0.05199,
+    "HydroGeneration": 38.33006
+  },
+  {
+    "Code": "COL",
+    "year": 2005,
+    "GeoBiomass": 0.503,
+    "SolarGeneration": 0.00953125,
+    "WindGeneration": 0.04948,
+    "HydroGeneration": 39.220886
+  },
+  {
+    "Code": "COL",
+    "year": 2006,
+    "GeoBiomass": 0.5197261,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.06298139,
+    "HydroGeneration": 42.55789
+  },
+  {
+    "Code": "COL",
+    "year": 2007,
+    "GeoBiomass": 0.5071364,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.049890976,
+    "HydroGeneration": 44.24198
+  },
+  {
+    "Code": "COL",
+    "year": 2008,
+    "GeoBiomass": 0.50934935,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.053918168,
+    "HydroGeneration": 46.16088
+  },
+  {
+    "Code": "COL",
+    "year": 2009,
+    "GeoBiomass": 1.0032873,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.057707813,
+    "HydroGeneration": 40.837364
+  },
+  {
+    "Code": "COL",
+    "year": 2010,
+    "GeoBiomass": 1.1099824,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.03856992,
+    "HydroGeneration": 40.55746
+  },
+  {
+    "Code": "COL",
+    "year": 2011,
+    "GeoBiomass": 1.3783877,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.041271944,
+    "HydroGeneration": 48.42748
+  },
+  {
+    "Code": "COL",
+    "year": 2012,
+    "GeoBiomass": 1.4760586,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.05485471,
+    "HydroGeneration": 47.58171
+  },
+  {
+    "Code": "COL",
+    "year": 2013,
+    "GeoBiomass": 1.3464338,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.057624802,
+    "HydroGeneration": 44.36279
+  },
+  {
+    "Code": "COL",
+    "year": 2014,
+    "GeoBiomass": 1.728923,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.0702303,
+    "HydroGeneration": 44.741962
+  },
+  {
+    "Code": "COL",
+    "year": 2015,
+    "GeoBiomass": 1.8229002,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.06837745,
+    "HydroGeneration": 44.681904
+  },
+  {
+    "Code": "COL",
+    "year": 2016,
+    "GeoBiomass": 1.9938043,
+    "SolarGeneration": 0.0,
+    "WindGeneration": 0.050887343,
+    "HydroGeneration": 46.787926
+  },
+  {
+    "Code": "COL",
+    "year": 2017,
+    "GeoBiomass": 1.9912593,
+    "SolarGeneration": 0.005,
+    "WindGeneration": 0.003071419,
+    "HydroGeneration": 57.32773
+  },
+  {
+    "Code": "COL",
+    "year": 2018,
+    "GeoBiomass": 2.1187904,
+    "SolarGeneration": 0.012,
+    "WindGeneration": 0.04344,
+    "HydroGeneration": 56.65124
+  },
+  {
+    "Code": "COL",
+    "year": 2019,
+    "GeoBiomass": 2.4441278,
+    "SolarGeneration": 0.13206,
+    "WindGeneration": 0.06332,
+    "HydroGeneration": 54.437
+  },
+  {
+    "Code": "COL",
+    "year": 2020,
+    "GeoBiomass": 2.820657,
+    "SolarGeneration": 0.1908,
+    "WindGeneration": 0.01012,
+    "HydroGeneration": 49.83735
+  },
+  {
+    "Code": "COL",
+    "year": 2021,
+    "GeoBiomass": 2.8208168,
+    "SolarGeneration": 0.31732163,
+    "WindGeneration": 0.059852246,
+    "HydroGeneration": 59.858196
+  }
+]
